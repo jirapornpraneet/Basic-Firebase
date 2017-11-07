@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รีเซ็ตรหัสผ่าน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng4-Oz-HQD">
-                                <rect key="frame" x="95.5" y="60" width="184" height="21"/>
+                                <rect key="frame" x="95.5" y="104" width="184" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="184" id="Lz0-AE-5Sn"/>
                                     <constraint firstAttribute="height" constant="21" id="PW5-lc-mxj"/>
@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="อีเมล" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvZ-lZ-Y4h">
-                                <rect key="frame" x="60" y="291" width="255" height="30"/>
+                                <rect key="frame" x="60" y="335" width="255" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LgZ-gQ-UPE"/>
                                     <constraint firstAttribute="width" constant="255" id="S7M-UY-Nzz"/>
@@ -88,7 +88,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRb-7B-0Wo">
-                                <rect key="frame" x="67.5" y="333" width="240" height="30"/>
+                                <rect key="frame" x="67.5" y="377" width="240" height="30"/>
                                 <color key="backgroundColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2d4-rE-HSP"/>
@@ -211,6 +211,9 @@
                                 <state key="normal" title="ลืมรหัสผ่าน?">
                                     <color key="titleColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="D8b-Qg-Jv6" kind="show" id="LaT-NZ-3D0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-uk-yoU">
                                 <rect key="frame" x="126" y="606" width="123" height="32"/>
