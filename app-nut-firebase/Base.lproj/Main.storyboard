@@ -140,7 +140,7 @@
         <!--Sing Up View Controller-->
         <scene sceneID="PQV-ia-igy">
             <objects>
-                <viewController id="u43-FJ-gpn" customClass="SingUpViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingUp" id="u43-FJ-gpn" customClass="SingUpViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Boa-lz-S27">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
