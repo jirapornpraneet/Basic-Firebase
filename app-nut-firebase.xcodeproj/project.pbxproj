@@ -82,11 +82,11 @@
 			children = (
 				AB062D651FB172D200C103E6 /* AppDelegate.swift */,
 				AB062D671FB172D200C103E6 /* HomeViewController.swift */,
+				AB062D781FB183AA00C103E6 /* LoginViewController.swift */,
 				AB062D691FB172D200C103E6 /* Main.storyboard */,
 				AB062D6C1FB172D200C103E6 /* Assets.xcassets */,
 				AB062D6E1FB172D200C103E6 /* LaunchScreen.storyboard */,
 				AB062D711FB172D200C103E6 /* Info.plist */,
-				AB062D781FB183AA00C103E6 /* LoginViewController.swift */,
 			);
 			path = "app-nut-firebase";
 			sourceTree = "<group>";

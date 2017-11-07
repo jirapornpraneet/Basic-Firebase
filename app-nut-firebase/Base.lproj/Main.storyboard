@@ -13,7 +13,7 @@
         <!--menut-->
         <scene sceneID="aPr-1b-tKQ">
             <objects>
-                <viewController id="oPg-hf-XCd" sceneMemberID="viewController">
+                <viewController id="oPg-hf-XCd" customClass="LoginViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JEa-Su-Gsg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,6 +112,11 @@
                         <viewLayoutGuide key="safeArea" id="11h-tq-2FI"/>
                     </view>
                     <navigationItem key="navigationItem" title="menut" id="mA4-uc-8kj"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="4Pc-2g-Bgm" id="gkm-pa-CND"/>
+                        <outlet property="loginButton" destination="vLg-Re-Hyo" id="EAo-v4-quA"/>
+                        <outlet property="passwordTextField" destination="pQp-bB-mRb" id="FlO-BH-5CB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pf-fl-AuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
