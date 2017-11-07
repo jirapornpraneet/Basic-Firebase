@@ -271,7 +271,7 @@
                                 <color key="textColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmw-nn-ztl">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmw-nn-ztl">
                                 <rect key="frame" x="27.5" y="502" width="320" height="40"/>
                                 <color key="backgroundColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -312,6 +312,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="nameEditingChanged:" destination="u43-FJ-gpn" eventType="editingChanged" id="no8-Yv-zDi"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agL-1Z-snF">
                                         <rect key="frame" x="109" y="95" width="195" height="30"/>
@@ -322,6 +325,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="lastnameEditingChanged:" destination="u43-FJ-gpn" eventType="editingChanged" id="bM4-lQ-LlT"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="นามสกุล :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvn-Th-xN0">
                                         <rect key="frame" x="33" y="98" width="69" height="21"/>
@@ -352,6 +358,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="genderEditingChanged:" destination="u43-FJ-gpn" eventType="editingChanged" id="9b2-TV-sdn"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="อีเมล :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrW-OW-Ffx">
                                         <rect key="frame" x="54" y="208" width="46" height="21"/>
@@ -372,6 +381,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailEditingChanged:" destination="u43-FJ-gpn" eventType="editingChanged" id="Nte-Tw-bkZ"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รหัสผ่าน :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgR-lT-wGF">
                                         <rect key="frame" x="33" y="263" width="65" height="21"/>
@@ -392,6 +404,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="passwordEditingChanged:" destination="u43-FJ-gpn" eventType="editingChanged" id="GkR-Zg-CGF"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -438,6 +453,7 @@
                         <outlet property="lastnameTextField" destination="agL-1Z-snF" id="X0t-eW-nu9"/>
                         <outlet property="nameTextField" destination="Z2m-Nn-7to" id="4yk-7w-7Mb"/>
                         <outlet property="passwordTextField" destination="ag9-99-9Hr" id="QgV-us-oIf"/>
+                        <outlet property="singUpButton" destination="Lmw-nn-ztl" id="i16-g2-tBY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzo-po-Rvl" userLabel="First Responder" sceneMemberID="firstResponder"/>

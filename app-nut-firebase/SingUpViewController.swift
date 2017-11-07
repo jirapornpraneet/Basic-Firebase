@@ -18,6 +18,7 @@ class SingUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var singUpButton: UIButton!
 
     var referense: DatabaseReference?
     var handle: DatabaseHandle?
@@ -52,6 +53,39 @@ class SingUpViewController: UIViewController, UITextFieldDelegate {
 
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+
+    func setSingUpButtonIsEnabled() {
+        let editTexts = [nameTextField,
+                         lastnameTextField,
+                         genderTextField,
+                         emailTextField,
+                         passwordTextField]
+        let emptyCount = editTexts
+            .filter { (textField) -> Bool in
+                textField?.text == "" }
+            .count
+        singUpButton.isEnabled = emptyCount == 0
+    }
+    
+    @IBAction func nameEditingChanged(_ sender: Any) {
+        setSingUpButtonIsEnabled()
+    }
+    
+    @IBAction func lastnameEditingChanged(_ sender: Any) {
+        setSingUpButtonIsEnabled()
+    }
+    
+    @IBAction func genderEditingChanged(_ sender: Any) {
+        setSingUpButtonIsEnabled()
+    }
+
+    @IBAction func emailEditingChanged(_ sender: Any) {
+        setSingUpButtonIsEnabled()
+    }
+    
+    @IBAction func passwordEditingChanged(_ sender: Any) {
+        setSingUpButtonIsEnabled()
     }
 
     func addDatabaseReference() {
