@@ -10,20 +10,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Hvg-Sj-FcI">
             <objects>
-                <viewController id="o8d-f2-Mc5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="o8d-f2-Mc5" customClass="HomeViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h1F-P1-CsE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="หน้าหลัก" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-BC-Bcc">
+                                <rect key="frame" x="127" y="60" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QIF-8G-3Al"/>
+                                    <constraint firstAttribute="width" constant="121" id="dgq-Uo-2L5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
+                                <color key="textColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeV-rn-3Xf">
+                                <rect key="frame" x="109" y="602" width="156" height="45"/>
+                                <color key="backgroundColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="eqB-nu-WJU"/>
+                                    <constraint firstAttribute="height" constant="45" id="p1O-nH-i8U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="ออกสู่ระบบ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97564977409999998" green="0.92932027579999998" blue="0.93333369489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="YeV-rn-3Xf" firstAttribute="top" secondItem="AHl-BC-Bcc" secondAttribute="bottom" constant="521" id="0Ap-ut-kNY"/>
+                            <constraint firstItem="AHl-BC-Bcc" firstAttribute="centerX" secondItem="h1F-P1-CsE" secondAttribute="centerX" id="JSa-va-hJD"/>
+                            <constraint firstItem="YeV-rn-3Xf" firstAttribute="centerX" secondItem="h1F-P1-CsE" secondAttribute="centerX" id="n7a-PV-Mpf"/>
+                            <constraint firstItem="AHl-BC-Bcc" firstAttribute="top" secondItem="T98-JL-B0t" secondAttribute="top" constant="40" id="sl5-P1-zVn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="T98-JL-B0t"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmC-dA-ELB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1529" y="-652"/>
+            <point key="canvasLocation" x="1528.8" y="-652.62368815592208"/>
         </scene>
         <!--menut-->
         <scene sceneID="aPr-1b-tKQ">
