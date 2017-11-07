@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class SingUpViewController: UIViewController {
+class SingUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
@@ -24,8 +24,34 @@ class SingUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
+        lastnameTextField.delegate = self
+        genderTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
 
-        // Do any additional setup after loading the view.
+        let tapGestureRecognizerKeyboard: UITapGestureRecognizer =
+            UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGestureRecognizerKeyboard)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameTextField {
+            lastnameTextField.becomeFirstResponder()
+        } else if textField == lastnameTextField {
+            genderTextField.becomeFirstResponder()
+        } else if textField == genderTextField {
+            emailTextField.becomeFirstResponder()
+        } else if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            singUpClicked(self)
+        }
+        return true
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     func addDatabaseReference() {
