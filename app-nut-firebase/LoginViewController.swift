@@ -47,15 +47,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             .count
         loginButton.isEnabled = emptyCount == 0
     }
-    
+
     @IBAction func emailEditingChanged(_ sender: Any) {
         setLoginButtonIsEnabled()
     }
-    
+
     @IBAction func passwordEditingChanged(_ sender: Any) {
         setLoginButtonIsEnabled()
     }
-    
+
     @IBAction func loginClicked(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!,
                            password: passwordTextField.text!) { (_, error) in
