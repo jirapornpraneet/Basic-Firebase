@@ -103,6 +103,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginClicked:" destination="oPg-hf-XCd" eventType="touchUpInside" id="18x-DE-SUk"/>
+                                    <action selector="resetPasswordCliked:" destination="D8b-Qg-Jv6" eventType="touchUpInside" id="k6K-Lo-1p1"/>
                                 </connections>
                             </button>
                         </subviews>
