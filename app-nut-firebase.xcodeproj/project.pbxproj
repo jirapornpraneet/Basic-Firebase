@@ -14,6 +14,8 @@
 		AB062D6D1FB172D200C103E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB062D6C1FB172D200C103E6 /* Assets.xcassets */; };
 		AB062D701FB172D200C103E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB062D6E1FB172D200C103E6 /* LaunchScreen.storyboard */; };
 		AB062D791FB183AA00C103E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062D781FB183AA00C103E6 /* LoginViewController.swift */; };
+		AB062D7B1FB18B9400C103E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB062D7A1FB18B9400C103E6 /* GoogleService-Info.plist */; };
+		AB062D7C1FB18B9F00C103E6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB062D711FB172D200C103E6 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		AB062D6F1FB172D200C103E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB062D711FB172D200C103E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB062D781FB183AA00C103E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AB062D7A1FB18B9400C103E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 				AB062D691FB172D200C103E6 /* Main.storyboard */,
 				AB062D6C1FB172D200C103E6 /* Assets.xcassets */,
 				AB062D6E1FB172D200C103E6 /* LaunchScreen.storyboard */,
+				AB062D7A1FB18B9400C103E6 /* GoogleService-Info.plist */,
 				AB062D711FB172D200C103E6 /* Info.plist */,
 			);
 			path = "app-nut-firebase";
@@ -155,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB062D701FB172D200C103E6 /* LaunchScreen.storyboard in Resources */,
+				AB062D7B1FB18B9400C103E6 /* GoogleService-Info.plist in Resources */,
 				AB062D6D1FB172D200C103E6 /* Assets.xcassets in Resources */,
+				AB062D7C1FB18B9F00C103E6 /* Info.plist in Resources */,
 				AB062D6B1FB172D200C103E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
