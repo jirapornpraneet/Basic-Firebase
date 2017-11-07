@@ -101,6 +101,7 @@
 				AB062D601FB172D200C103E6 /* Resources */,
 				B625ADAF9772E690EA25996C /* [CP] Embed Pods Frameworks */,
 				2F1A74EFF5BEC7BDEA872D9F /* [CP] Copy Pods Resources */,
+				AB062D771FB173F800C103E6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,6 +192,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-app-nut-firebase/Pods-app-nut-firebase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AB062D771FB173F800C103E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		B625ADAF9772E690EA25996C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
