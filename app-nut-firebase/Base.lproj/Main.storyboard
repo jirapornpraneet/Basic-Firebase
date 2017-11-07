@@ -117,6 +117,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9M3-6x-Eeo"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="cvZ-lZ-Y4h" id="MMa-zL-bPI"/>
+                        <outlet property="resetPasswordButton" destination="BRb-7B-0Wo" id="GRx-2o-bRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ1-fT-iOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
