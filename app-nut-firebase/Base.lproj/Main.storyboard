@@ -25,21 +25,112 @@
             </objects>
             <point key="canvasLocation" x="-210" y="42"/>
         </scene>
-        <!--View Controller-->
+        <!--menut-->
         <scene sceneID="aPr-1b-tKQ">
             <objects>
                 <viewController id="oPg-hf-XCd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JEa-Su-Gsg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="8Ha-YW-k0l">
+                                <rect key="frame" x="125" y="123" width="125" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Eep-lI-8vT"/>
+                                    <constraint firstAttribute="width" constant="125" id="H6K-jK-Av5"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEc-4A-t7v">
+                                <rect key="frame" x="45.5" y="269" width="284" height="128"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="อีเมล" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-2g-Bgm">
+                                        <rect key="frame" x="20.5" y="21" width="243" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="243" id="RZr-AH-E20"/>
+                                            <constraint firstAttribute="height" constant="30" id="d1X-z2-R2M"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="รหัสผ่าน" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pQp-bB-mRb">
+                                        <rect key="frame" x="20.5" y="75" width="243" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="243" id="7tQ-v4-ctl"/>
+                                            <constraint firstAttribute="height" constant="30" id="pJ8-4D-uTb"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4Pc-2g-Bgm" firstAttribute="top" secondItem="PEc-4A-t7v" secondAttribute="top" constant="21" id="120-v0-XjX"/>
+                                    <constraint firstAttribute="width" constant="284" id="F74-h0-Ts7"/>
+                                    <constraint firstAttribute="height" constant="128" id="Hte-pI-rxF"/>
+                                    <constraint firstItem="pQp-bB-mRb" firstAttribute="top" secondItem="4Pc-2g-Bgm" secondAttribute="bottom" constant="24" id="Mi1-mf-sn4"/>
+                                    <constraint firstItem="pQp-bB-mRb" firstAttribute="centerX" secondItem="PEc-4A-t7v" secondAttribute="centerX" id="fKB-Lf-JeW"/>
+                                    <constraint firstItem="4Pc-2g-Bgm" firstAttribute="centerX" secondItem="PEc-4A-t7v" secondAttribute="centerX" id="k3e-oa-jfV"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLg-Re-Hyo">
+                                <rect key="frame" x="50.5" y="414" width="274" height="30"/>
+                                <color key="backgroundColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="274" id="1RI-P0-bPE"/>
+                                    <constraint firstAttribute="height" constant="30" id="sWk-Ow-YS9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AA-A4-utZ">
+                                <rect key="frame" x="145.5" y="452" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="VDw-5r-wtI"/>
+                                    <constraint firstAttribute="height" constant="30" id="sST-7A-m0j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="ลืมรหัสผ่าน?">
+                                    <color key="titleColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-uk-yoU">
+                                <rect key="frame" x="126" y="606" width="123" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="iYx-nn-LET"/>
+                                    <constraint firstAttribute="height" constant="32" id="jI1-sP-cki"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="สร้างบัญชีผู้ใช้">
+                                    <color key="titleColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97400460030000002" green="0.92568824110000003" blue="0.93255254949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8Ha-YW-k0l" firstAttribute="top" secondItem="11h-tq-2FI" secondAttribute="top" constant="59" id="A7h-fi-HQs"/>
+                            <constraint firstItem="7AA-A4-utZ" firstAttribute="top" secondItem="vLg-Re-Hyo" secondAttribute="bottom" constant="8" id="HkG-WX-ksf"/>
+                            <constraint firstItem="PEc-4A-t7v" firstAttribute="top" secondItem="8Ha-YW-k0l" secondAttribute="bottom" constant="26" id="Hup-CE-KDe"/>
+                            <constraint firstItem="vLg-Re-Hyo" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="JTj-Cb-mDU"/>
+                            <constraint firstItem="Wee-uk-yoU" firstAttribute="top" secondItem="7AA-A4-utZ" secondAttribute="bottom" constant="124" id="UKj-qs-YHS"/>
+                            <constraint firstItem="Wee-uk-yoU" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="VdL-yx-Fgj"/>
+                            <constraint firstItem="vLg-Re-Hyo" firstAttribute="top" secondItem="PEc-4A-t7v" secondAttribute="bottom" constant="17" id="ZOR-aF-RJu"/>
+                            <constraint firstItem="PEc-4A-t7v" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="f78-qf-pgA"/>
+                            <constraint firstItem="7AA-A4-utZ" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="n41-Do-d0l"/>
+                            <constraint firstItem="8Ha-YW-k0l" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="oVL-Z1-kab"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="11h-tq-2FI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mA4-uc-8kj"/>
+                    <navigationItem key="navigationItem" title="menut" id="mA4-uc-8kj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pf-fl-AuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="42"/>
+            <point key="canvasLocation" x="1541.5999999999999" y="41.829085457271368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PfG-sq-c7P">
@@ -57,7 +148,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMI-aY-jHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827.20000000000005" y="41.379310344827587"/>
+            <point key="canvasLocation" x="844" y="42"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="girl" width="256" height="256"/>
+    </resources>
 </document>
