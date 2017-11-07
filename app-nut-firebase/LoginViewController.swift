@@ -39,10 +39,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setLoginButtonIsEnabled() {
+        let editTexts = [emailTextField, passwordTextField]
+        let emptyCount = editTexts
+            .filter { (textField) -> Bool in
+            textField?.text == "" }
+            .count
+        loginButton.isEnabled = emptyCount == 0
     }
+    
+    @IBAction func emailEditingChanged(_ sender: Any) {
+        setLoginButtonIsEnabled()
+    }
+    
+    @IBAction func passwordEditingChanged(_ sender: Any) {
+        setLoginButtonIsEnabled()
+    }
+    
     @IBAction func loginClicked(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!,
                            password: passwordTextField.text!) { (_, error) in
