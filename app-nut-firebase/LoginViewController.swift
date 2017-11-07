@@ -11,11 +11,11 @@ import Firebase
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-    
+
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,5 +26,30 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func loginClicked(_ sender: Any) {
+        Auth.auth().signIn(withEmail: emailTextField.text!,
+                           password: passwordTextField.text!) { (_, error) in
+            if error == nil {
+                let alertController = UIAlertController(title: "เข้าสู่ระบบ",
+                                                        message: "เข้าสู่ระบบเรียบร้อย",
+                                                        preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "ตกลง",
+                                                        style: UIAlertActionStyle.default,
+                                                        handler: { (_) in
+                                                            let vc = self.storyboard?
+                                                                .instantiateViewController(withIdentifier: "Home")
+                                                            self.show(vc!, sender: sender)
+                }))
+                self.present(alertController, animated: true, completion: nil)
+            } else {
+                let alertController = UIAlertController(title: "ข้อผิดพลาด",
+                                                        message: error?.localizedDescription,
+                                                        preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "ตกลง",
+                                                        style: .cancel,
+                                                        handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
 }
