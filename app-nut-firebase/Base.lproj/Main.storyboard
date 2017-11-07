@@ -75,7 +75,7 @@
                                     <constraint firstAttribute="height" constant="30" id="sWk-Ow-YS9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="เข้าสู่ระบบ">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="disabled">
@@ -217,7 +217,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เพศ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWA-Ai-uas">
-                                        <rect key="frame" x="53" y="153" width="40" height="21"/>
+                                        <rect key="frame" x="59" y="153" width="40" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="hCg-vP-Lwe"/>
                                             <constraint firstAttribute="width" constant="40" id="tKZ-ye-ikE"/>
@@ -298,7 +298,7 @@
                                     <constraint firstAttribute="width" constant="340" id="oXF-xM-3TE"/>
                                     <constraint firstAttribute="trailing" secondItem="H8S-1M-MpT" secondAttribute="trailing" constant="36" id="qV8-nz-iLb"/>
                                     <constraint firstItem="bRW-Z6-q5x" firstAttribute="baseline" secondItem="Z2m-Nn-7to" secondAttribute="baseline" constant="2" id="qs1-Pk-D3N"/>
-                                    <constraint firstItem="H8S-1M-MpT" firstAttribute="leading" secondItem="HWA-Ai-uas" secondAttribute="trailing" constant="16" id="uSi-vr-LZx"/>
+                                    <constraint firstItem="H8S-1M-MpT" firstAttribute="leading" secondItem="HWA-Ai-uas" secondAttribute="trailing" constant="10" id="uSi-vr-LZx"/>
                                     <constraint firstItem="ag9-99-9Hr" firstAttribute="top" secondItem="2Ds-iX-a23" secondAttribute="bottom" constant="25" id="w0Q-hx-E71"/>
                                     <constraint firstAttribute="trailing" secondItem="ag9-99-9Hr" secondAttribute="trailing" constant="36" id="zF1-Hz-HFQ"/>
                                 </constraints>
