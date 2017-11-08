@@ -170,7 +170,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="passwordEditingChanged:" destination="oPg-hf-XCd" eventType="editingChanged" id="7wb-bk-9fd"/>
                                         </connections>
