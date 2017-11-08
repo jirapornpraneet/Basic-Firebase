@@ -13,39 +13,58 @@ import FirebaseDatabase
 
 class SingUpViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var firstnameTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
-    @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var singUpButton: UIButton!
 
     var referense: DatabaseReference?
     var handle: DatabaseHandle?
+    var genderList: [String] = ["Male", "Female"]
+    var genderName: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextField.delegate = self
+        firstnameTextField.delegate = self
         lastnameTextField.delegate = self
-        genderTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
 
         let tapGestureRecognizerKeyboard: UITapGestureRecognizer =
             UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGestureRecognizerKeyboard)
+
+        let genderSelect: String = genderList[genderSegmentedControl.selectedSegmentIndex]
+        genderName = genderSelect
+    }
+
+    @IBAction func selectGenderSegmented(_ sender: Any) {
+        switch genderSegmentedControl.selectedSegmentIndex {
+        case 0:
+            genderName = "Male"
+        case 1:
+            genderName = "Female"
+        default:
+            break
+        }
+        let genderSelect: String = genderList[genderSegmentedControl.selectedSegmentIndex]
+        genderName = genderSelect
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == nameTextField {
+        if textField == firstnameTextField {
             lastnameTextField.becomeFirstResponder()
         } else if textField == lastnameTextField {
-            genderTextField.becomeFirstResponder()
-        } else if textField == genderTextField {
             emailTextField.becomeFirstResponder()
         } else if textField == emailTextField {
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
+            confirmPasswordTextField.becomeFirstResponder()
+        } else if textField ==  confirmPasswordTextField {
             singUpClicked(self)
         }
         return true
@@ -56,11 +75,11 @@ class SingUpViewController: UIViewController, UITextFieldDelegate {
     }
 
     func setSingUpButtonIsEnabled() {
-        let editTexts = [nameTextField,
+        let editTexts = [firstnameTextField,
                          lastnameTextField,
-                         genderTextField,
                          emailTextField,
-                         passwordTextField]
+                         passwordTextField,
+                         confirmPasswordTextField]
         let emptyCount = editTexts
             .filter { (textField) -> Bool in
                 textField?.text == "" }
@@ -68,15 +87,11 @@ class SingUpViewController: UIViewController, UITextFieldDelegate {
         singUpButton.isEnabled = emptyCount == 0
     }
 
-    @IBAction func nameEditingChanged(_ sender: Any) {
+    @IBAction func firstnameEditingChanged(_ sender: Any) {
         setSingUpButtonIsEnabled()
     }
 
     @IBAction func lastnameEditingChanged(_ sender: Any) {
-        setSingUpButtonIsEnabled()
-    }
-
-    @IBAction func genderEditingChanged(_ sender: Any) {
         setSingUpButtonIsEnabled()
     }
 
@@ -88,13 +103,18 @@ class SingUpViewController: UIViewController, UITextFieldDelegate {
         setSingUpButtonIsEnabled()
     }
 
+    @IBAction func confirmPasswordEditingChanged(_ sender: Any) {
+        setSingUpButtonIsEnabled()
+    }
+
     func addDatabaseReference() {
         referense = Database.database().reference()
-        referense?.child("users").child("name").childByAutoId().setValue(nameTextField.text)
+        referense?.child("users").child("firstname").childByAutoId().setValue(firstnameTextField.text)
         referense?.child("users").child("lastname").childByAutoId().setValue(lastnameTextField.text)
-        referense?.child("users").child("gender").childByAutoId().setValue(genderTextField.text)
+        referense?.child("users").child("gender").childByAutoId().setValue(genderName)
         referense?.child("users").child("email").childByAutoId().setValue(emailTextField.text)
         referense?.child("users").child("password").childByAutoId().setValue(passwordTextField.text)
+        referense?.child("users").child("confirmPassword").childByAutoId().setValue(confirmPasswordTextField.text)
     }
 
     @IBAction func singUpClicked(_ sender: Any) {
