@@ -142,7 +142,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLg-Re-Hyo">
-                                <rect key="frame" x="45.5" y="401" width="285" height="43"/>
+                                <rect key="frame" x="45.5" y="387" width="285" height="43"/>
                                 <color key="backgroundColor" red="0.55846950778378524" green="0.50654744564833498" blue="0.8219384517766497" alpha="0.98405393839999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="285" id="0Sw-UB-enm"/>
@@ -174,7 +174,7 @@ layer.masksToBounds</string>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AA-A4-utZ">
-                                <rect key="frame" x="126" y="452" width="124" height="30"/>
+                                <rect key="frame" x="126" y="438" width="124" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="NFc-h5-Xnx"/>
                                     <constraint firstAttribute="height" constant="30" id="afR-Yo-j2U"/>
@@ -188,7 +188,7 @@ layer.masksToBounds</string>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-uk-yoU">
-                                <rect key="frame" x="126" y="606" width="123" height="32"/>
+                                <rect key="frame" x="126" y="608" width="123" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="12E-P0-iqh"/>
                                     <constraint firstAttribute="height" constant="32" id="fVp-mi-Qyp"/>
@@ -334,13 +334,13 @@ layer.masksToBounds</string>
                             <constraint firstItem="6uY-Vn-N34" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="JO9-Ve-WOU"/>
                             <constraint firstItem="pxU-LC-HpJ" firstAttribute="top" secondItem="gbq-qS-kAO" secondAttribute="bottom" constant="20" id="Tm8-dW-GrK"/>
                             <constraint firstItem="7AA-A4-utZ" firstAttribute="top" secondItem="vLg-Re-Hyo" secondAttribute="bottom" constant="8" id="W7m-2s-AVK"/>
-                            <constraint firstItem="vLg-Re-Hyo" firstAttribute="top" secondItem="pxU-LC-HpJ" secondAttribute="bottom" constant="29" id="aND-Q7-8Kt"/>
+                            <constraint firstItem="vLg-Re-Hyo" firstAttribute="top" secondItem="pxU-LC-HpJ" secondAttribute="bottom" constant="15" id="aND-Q7-8Kt"/>
                             <constraint firstItem="pxU-LC-HpJ" firstAttribute="leading" secondItem="11h-tq-2FI" secondAttribute="leading" constant="35" id="b08-x8-mDB"/>
                             <constraint firstItem="11h-tq-2FI" firstAttribute="trailing" secondItem="pxU-LC-HpJ" secondAttribute="trailing" constant="35" id="diW-5N-fPG"/>
                             <constraint firstItem="6uY-Vn-N34" firstAttribute="top" secondItem="11h-tq-2FI" secondAttribute="top" constant="70" id="inI-mr-eTH"/>
                             <constraint firstItem="gbq-qS-kAO" firstAttribute="leading" secondItem="11h-tq-2FI" secondAttribute="leading" constant="35" id="loM-1N-FeR"/>
                             <constraint firstItem="11h-tq-2FI" firstAttribute="trailing" secondItem="gbq-qS-kAO" secondAttribute="trailing" constant="35" id="otQ-S5-FlJ"/>
-                            <constraint firstItem="Wee-uk-yoU" firstAttribute="top" secondItem="7AA-A4-utZ" secondAttribute="bottom" constant="124" id="svY-6H-eoj"/>
+                            <constraint firstItem="Wee-uk-yoU" firstAttribute="top" secondItem="7AA-A4-utZ" secondAttribute="bottom" constant="140" id="svY-6H-eoj"/>
                             <constraint firstItem="7AA-A4-utZ" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="yzK-vH-Fnd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="11h-tq-2FI"/>
