@@ -67,15 +67,15 @@ class SingUpViewController: UIViewController, UITextFieldDelegate {
             .count
         singUpButton.isEnabled = emptyCount == 0
     }
-    
+
     @IBAction func nameEditingChanged(_ sender: Any) {
         setSingUpButtonIsEnabled()
     }
-    
+
     @IBAction func lastnameEditingChanged(_ sender: Any) {
         setSingUpButtonIsEnabled()
     }
-    
+
     @IBAction func genderEditingChanged(_ sender: Any) {
         setSingUpButtonIsEnabled()
     }
@@ -83,7 +83,7 @@ class SingUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func emailEditingChanged(_ sender: Any) {
         setSingUpButtonIsEnabled()
     }
-    
+
     @IBAction func passwordEditingChanged(_ sender: Any) {
         setSingUpButtonIsEnabled()
     }
