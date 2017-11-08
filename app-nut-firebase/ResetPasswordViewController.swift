@@ -19,10 +19,17 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         emailTextField.delegate = self
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.resignFirstResponder()
         return true
+    }
+    @IBAction func emailEditingChanged(_ sender: Any) {
+        if emailTextField.text != "" {
+            resetPasswordButton.isEnabled = true
+        } else {
+            resetPasswordButton.isEnabled = false
+        }
     }
 
     @IBAction func resetPasswordCliked(_ sender: Any) {

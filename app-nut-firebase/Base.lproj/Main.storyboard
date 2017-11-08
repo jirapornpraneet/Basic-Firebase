@@ -86,8 +86,11 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailEditingChanged:" destination="D8b-Qg-Jv6" eventType="editingChanged" id="FsU-1n-NEB"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRb-7B-0Wo">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRb-7B-0Wo">
                                 <rect key="frame" x="67.5" y="377" width="240" height="30"/>
                                 <color key="backgroundColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -96,7 +99,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="รีเซ็ตรหัสผ่าน">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="disabled">
                                     <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
