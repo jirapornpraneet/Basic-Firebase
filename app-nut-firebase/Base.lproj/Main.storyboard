@@ -194,7 +194,7 @@ layer.masksToBounds</string>
                                     <constraint firstAttribute="height" constant="32" id="fVp-mi-Qyp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="สร้างบัญชีผู้ใช้">
+                                <state key="normal" title="Sing Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
