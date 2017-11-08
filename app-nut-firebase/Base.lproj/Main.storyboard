@@ -294,6 +294,9 @@ layer.masksToBounds</string>
                                             <constraint firstAttribute="width" constant="26" id="lFy-Nm-GV3"/>
                                         </constraints>
                                         <state key="normal" image="icon_eye_white"/>
+                                        <connections>
+                                            <action selector="showPasswordClicked:" destination="oPg-hf-XCd" eventType="touchUpInside" id="Kch-aw-jgB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.84263044249999997" green="0.83225871679999996" blue="1" alpha="0.49764554789999998" colorSpace="custom" customColorSpace="displayP3"/>
@@ -347,6 +350,7 @@ layer.masksToBounds</string>
                         <outlet property="emailTextField" destination="4Pc-2g-Bgm" id="gkm-pa-CND"/>
                         <outlet property="loginButton" destination="vLg-Re-Hyo" id="EAo-v4-quA"/>
                         <outlet property="passwordTextField" destination="pQp-bB-mRb" id="FlO-BH-5CB"/>
+                        <outlet property="showPasswordButton" destination="Hpu-B9-EAr" id="hTC-xa-aHX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pf-fl-AuI" userLabel="First Responder" sceneMemberID="firstResponder"/>

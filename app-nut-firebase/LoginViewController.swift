@@ -15,7 +15,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-
+    @IBOutlet weak var showPasswordButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
@@ -54,6 +55,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func passwordEditingChanged(_ sender: Any) {
         setLoginButtonIsEnabled()
+    }
+
+    @IBAction func showPasswordClicked(_ sender: Any) {
+        let origImage = UIImage(named: "icon_eye_red")
+        let tintedImage = origImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        showPasswordButton.setImage(tintedImage, for: .normal)
+
+        if passwordTextField.isSecureTextEntry {
+            passwordTextField.isSecureTextEntry = false
+            showPasswordButton.tintColor = UIColor.red
+        } else {
+            passwordTextField.isSecureTextEntry = true
+            showPasswordButton.tintColor = UIColor.white
+        }
     }
 
     @IBAction func loginClicked(_ sender: Any) {
