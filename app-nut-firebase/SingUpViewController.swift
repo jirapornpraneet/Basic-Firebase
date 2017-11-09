@@ -51,8 +51,6 @@ class SingUpViewController: UIViewController, UITextFieldDelegate {
         default:
             break
         }
-        let genderSelect: String = genderList[genderSegmentedControl.selectedSegmentIndex]
-        genderName = genderSelect
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
