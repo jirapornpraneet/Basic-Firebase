@@ -150,7 +150,6 @@ layer.masksToBounds</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="loginClicked:" destination="oPg-hf-XCd" eventType="touchUpInside" id="lYn-EH-DSA"/>
                                     <action selector="resetPasswordCliked:" destination="D8b-Qg-Jv6" eventType="touchUpInside" id="xjO-cu-mf3"/>
                                 </connections>
                             </button>
