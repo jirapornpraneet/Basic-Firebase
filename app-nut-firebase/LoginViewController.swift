@@ -16,7 +16,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var showPasswordButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
@@ -71,6 +71,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
+
     @IBAction func loginClicked(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!,
                            password: passwordTextField.text!) { (_, error) in
@@ -81,9 +85,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 alertController.addAction(UIAlertAction(title: "ตกลง",
                                                         style: UIAlertActionStyle.default,
                                                         handler: { (_) in
-                                                            let vc = self.storyboard?
-                                                                .instantiateViewController(withIdentifier: "Home")
-                                                            self.show(vc!, sender: sender)
+                                                            self.performSegue(withIdentifier: "Home", sender: sender)
                 }))
                 self.present(alertController, animated: true, completion: nil)
             } else {
