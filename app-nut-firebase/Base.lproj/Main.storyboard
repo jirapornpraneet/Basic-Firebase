@@ -71,63 +71,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รีเซ็ตรหัสผ่าน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng4-Oz-HQD">
-                                <rect key="frame" x="95.5" y="104" width="184" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ZE3-f8-LDx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-KU-B8E">
+                                <rect key="frame" x="54" y="100" width="267" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="184" id="Lz0-AE-5Sn"/>
-                                    <constraint firstAttribute="height" constant="21" id="PW5-lc-mxj"/>
+                                    <constraint firstAttribute="height" constant="68" id="dWT-e0-Dsi"/>
+                                    <constraint firstAttribute="width" constant="267" id="pOw-Jb-SdB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                <color key="textColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="35"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="อีเมล" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvZ-lZ-Y4h">
-                                <rect key="frame" x="60" y="335" width="255" height="30"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gck-eI-l9v">
+                                <rect key="frame" x="35" y="311" width="305" height="45"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_email" translatesAutoresizingMaskIntoConstraints="NO" id="obe-vW-0jw">
+                                        <rect key="frame" x="15" y="11" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xxo-Bu-lgv">
+                                        <rect key="frame" x="49" y="8" width="247" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailEditingChanged:" destination="oPg-hf-XCd" eventType="editingChanged" id="Qmk-2O-J3S"/>
+                                            <action selector="emailEditingChanged:" destination="D8b-Qg-Jv6" eventType="editingChanged" id="UsJ-yj-zJ3"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84313725490000002" green="0.83137254900000002" blue="1" alpha="0.49764554789999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="LgZ-gQ-UPE"/>
-                                    <constraint firstAttribute="width" constant="255" id="S7M-UY-Nzz"/>
+                                    <constraint firstAttribute="height" constant="45" id="iZY-GY-4En"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="emailEditingChanged:" destination="D8b-Qg-Jv6" eventType="editingChanged" id="FsU-1n-NEB"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRb-7B-0Wo">
-                                <rect key="frame" x="67.5" y="377" width="240" height="30"/>
-                                <color key="backgroundColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" value="YES">
+                                        <string key="keyPath">layer.masksToBounds
+accepted
+Yes, I use that a lot but question like this was already answered many times.
+
+But anyway in Interface Builder. You need to add User Defined Runtime Attributes like this:
+
+layer.masksToBounds</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izy-cj-2nA">
+                                <rect key="frame" x="45" y="371" width="285" height="43"/>
+                                <color key="backgroundColor" red="0.55846950780000004" green="0.50654744559999998" blue="0.82193845180000003" alpha="0.98405393839999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2d4-rE-HSP"/>
-                                    <constraint firstAttribute="width" constant="240" id="x8J-ot-Yn4"/>
+                                    <constraint firstAttribute="height" constant="43" id="N8b-eo-fGA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="รีเซ็ตรหัสผ่าน">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Reset Password">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="disabled">
-                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.67889435279999999" green="0.67889435279999999" blue="0.67889435279999999" alpha="0.76197559930000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" value="YES">
+                                        <string key="keyPath">layer.masksToBounds
+accepted
+Yes, I use that a lot but question like this was already answered many times.
+
+But anyway in Interface Builder. You need to add User Defined Runtime Attributes like this:
+
+layer.masksToBounds</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="loginClicked:" destination="oPg-hf-XCd" eventType="touchUpInside" id="18x-DE-SUk"/>
-                                    <action selector="resetPasswordCliked:" destination="D8b-Qg-Jv6" eventType="touchUpInside" id="k6K-Lo-1p1"/>
+                                    <action selector="loginClicked:" destination="oPg-hf-XCd" eventType="touchUpInside" id="lYn-EH-DSA"/>
+                                    <action selector="resetPasswordCliked:" destination="D8b-Qg-Jv6" eventType="touchUpInside" id="xjO-cu-mf3"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97564977409999998" green="0.92932027579999998" blue="0.93333369489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Ng4-Oz-HQD" firstAttribute="centerX" secondItem="Fgl-xd-oe7" secondAttribute="centerX" id="01h-Xu-0Cb"/>
-                            <constraint firstItem="cvZ-lZ-Y4h" firstAttribute="top" secondItem="Ng4-Oz-HQD" secondAttribute="bottom" constant="210" id="FBH-yL-51S"/>
-                            <constraint firstItem="BRb-7B-0Wo" firstAttribute="top" secondItem="cvZ-lZ-Y4h" secondAttribute="bottom" constant="12" id="Zqz-AE-TWN"/>
-                            <constraint firstItem="Ng4-Oz-HQD" firstAttribute="top" secondItem="9M3-6x-Eeo" secondAttribute="top" constant="40" id="bA4-Zp-ZZv"/>
-                            <constraint firstItem="cvZ-lZ-Y4h" firstAttribute="centerX" secondItem="Fgl-xd-oe7" secondAttribute="centerX" id="cxC-kg-fed"/>
-                            <constraint firstItem="BRb-7B-0Wo" firstAttribute="centerX" secondItem="Fgl-xd-oe7" secondAttribute="centerX" id="gTg-6M-yDn"/>
+                            <constraint firstItem="Gck-eI-l9v" firstAttribute="centerY" secondItem="Fgl-xd-oe7" secondAttribute="centerY" id="1ki-Qt-iCu"/>
+                            <constraint firstItem="ZE3-f8-LDx" firstAttribute="leading" secondItem="9M3-6x-Eeo" secondAttribute="leading" id="9k9-4o-X6o"/>
+                            <constraint firstItem="Gck-eI-l9v" firstAttribute="leading" secondItem="9M3-6x-Eeo" secondAttribute="leading" constant="35" id="IIs-8V-g4l"/>
+                            <constraint firstItem="ZE3-f8-LDx" firstAttribute="trailing" secondItem="9M3-6x-Eeo" secondAttribute="trailing" id="LWa-sX-4Vq"/>
+                            <constraint firstItem="CH8-KU-B8E" firstAttribute="top" secondItem="9M3-6x-Eeo" secondAttribute="top" constant="36" id="W6A-zP-w3Y"/>
+                            <constraint firstItem="9M3-6x-Eeo" firstAttribute="trailing" secondItem="Gck-eI-l9v" secondAttribute="trailing" constant="35" id="ZEu-Hv-2lF"/>
+                            <constraint firstItem="Gck-eI-l9v" firstAttribute="centerX" secondItem="Fgl-xd-oe7" secondAttribute="centerX" id="bex-XW-aDD"/>
+                            <constraint firstItem="ZE3-f8-LDx" firstAttribute="bottom" secondItem="9M3-6x-Eeo" secondAttribute="bottom" id="bju-UK-Flb"/>
+                            <constraint firstItem="ZE3-f8-LDx" firstAttribute="top" secondItem="Fgl-xd-oe7" secondAttribute="top" id="cNQ-DJ-rL0"/>
+                            <constraint firstItem="9M3-6x-Eeo" firstAttribute="trailing" secondItem="izy-cj-2nA" secondAttribute="trailing" constant="45" id="kF0-JR-EUQ"/>
+                            <constraint firstItem="CH8-KU-B8E" firstAttribute="centerX" secondItem="Fgl-xd-oe7" secondAttribute="centerX" id="oOB-nV-qyx"/>
+                            <constraint firstItem="izy-cj-2nA" firstAttribute="leading" secondItem="9M3-6x-Eeo" secondAttribute="leading" constant="45" id="tg0-qo-U3k"/>
+                            <constraint firstItem="izy-cj-2nA" firstAttribute="top" secondItem="Gck-eI-l9v" secondAttribute="bottom" constant="15" id="y2e-L2-1IQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9M3-6x-Eeo"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="cvZ-lZ-Y4h" id="MMa-zL-bPI"/>
-                        <outlet property="resetPasswordButton" destination="BRb-7B-0Wo" id="GRx-2o-bRg"/>
+                        <outlet property="emailTextField" destination="xxo-Bu-lgv" id="J1u-JZ-E0f"/>
+                        <outlet property="resetPasswordButton" destination="izy-cj-2nA" id="URf-Fu-umF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ1-fT-iOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
