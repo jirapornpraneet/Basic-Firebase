@@ -16,6 +16,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
 
     @IBAction func logOutClicked(_ sender: Any) {
         if Auth.auth().currentUser != nil {
