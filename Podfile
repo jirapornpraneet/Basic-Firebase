@@ -10,5 +10,6 @@ target 'app-nut-firebase' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
     pod 'SwiftLint', '~> 0.23.1'
+    pod 'AZTabBar','~> 1.3.1'
 
 end
