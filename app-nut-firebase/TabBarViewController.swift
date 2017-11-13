@@ -88,6 +88,12 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         tabController.separatorLineColor = .black
         tabController.separatorLineVisible = false
         tabController.animateTabChange = true
+        tabController.setTitle("Home", atIndex: 0)
+        tabController.setTitle("Search", atIndex: 1)
+        tabController.setTitle("Camera", atIndex: 2)
+        tabController.setTitle("Feed", atIndex: 3)
+        tabController.setTitle("Profile", atIndex: 4)
+        tabController.onlyShowTextForSelectedButtons = true
     }
 
     override var childViewControllerForStatusBarStyle: UIViewController? {
