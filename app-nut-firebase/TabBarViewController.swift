@@ -35,11 +35,12 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         tabController = AZTabBarController.insert(into: self, withTabIcons: icons, andSelectedIcons: sIcons)
         tabController.delegate = self
 
-        customTabBarController()
+        addActionsTabBarToViewController()
+        customizationsTabBar()
 
     }
 
-    func customTabBarController() {
+    func addActionsTabBarToViewController() {
         let myHomeViewController = UIStoryboard(name: "Main",
                                                 bundle: nil)
             .instantiateViewController(withIdentifier: "HomeViewController")
@@ -77,7 +78,9 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         tabController?.setAction(atIndex: 0) {
             print("Index 0")
         }
+    }
 
+    func customizationsTabBar() {
         tabController.defaultColor = UIColor(red: 0.95, green: 0.58, blue: 0.58, alpha: 1.0)
         tabController.selectedColor = UIColor(red: 0.99, green: 0.33, blue: 0.44, alpha: 1.0)
         tabController.highlightColor = .white
@@ -88,6 +91,7 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         tabController.separatorLineColor = .black
         tabController.separatorLineVisible = false
         tabController.animateTabChange = true
+
         tabController.setTitle("Home", atIndex: 0)
         tabController.setTitle("Search", atIndex: 1)
         tabController.setTitle("Camera", atIndex: 2)
