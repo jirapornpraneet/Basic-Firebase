@@ -33,6 +33,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="qYa-0L-LCb" kind="show" identifier="HomeViewController" id="zEm-hr-k80"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmC-dA-ELB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -727,10 +730,10 @@ layer.masksToBounds</string>
             </objects>
             <point key="canvasLocation" x="958" y="1478"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="lto-Gy-AWN">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="qYa-0L-LCb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="qYa-0L-LCb" customClass="HomeViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cOS-a4-VJU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
