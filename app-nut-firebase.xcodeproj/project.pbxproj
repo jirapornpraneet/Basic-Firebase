@@ -18,6 +18,7 @@
 		AB062D7E1FB195DA00C103E6 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062D7D1FB195DA00C103E6 /* SingUpViewController.swift */; };
 		AB08BEFF1FB98C8300E634B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08BEFE1FB98C8300E634B0 /* HomeViewController.swift */; };
 		AB5D5FF21FB9A6AB00020551 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5D5FF11FB9A6AB00020551 /* SearchViewController.swift */; };
+		AB5D5FF41FB9B33700020551 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5D5FF31FB9B33700020551 /* CameraViewController.swift */; };
 		AB9ABE151FB1BB5600DB3204 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ABE141FB1BB5600DB3204 /* ResetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		AB062D7D1FB195DA00C103E6 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		AB08BEFE1FB98C8300E634B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AB5D5FF11FB9A6AB00020551 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AB5D5FF31FB9B33700020551 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AB9ABE141FB1BB5600DB3204 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				AB062D6E1FB172D200C103E6 /* LaunchScreen.storyboard */,
 				AB062D7A1FB18B9400C103E6 /* GoogleService-Info.plist */,
 				AB062D711FB172D200C103E6 /* Info.plist */,
+				AB5D5FF31FB9B33700020551 /* CameraViewController.swift */,
 			);
 			path = "app-nut-firebase";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				AB062D681FB172D200C103E6 /* TabBarViewController.swift in Sources */,
 				AB9ABE151FB1BB5600DB3204 /* ResetPasswordViewController.swift in Sources */,
 				AB062D7E1FB195DA00C103E6 /* SingUpViewController.swift in Sources */,
+				AB5D5FF41FB9B33700020551 /* CameraViewController.swift in Sources */,
 				AB062D661FB172D200C103E6 /* AppDelegate.swift in Sources */,
 				AB08BEFF1FB98C8300E634B0 /* HomeViewController.swift in Sources */,
 			);
