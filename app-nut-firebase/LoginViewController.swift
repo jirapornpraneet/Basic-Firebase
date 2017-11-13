@@ -85,7 +85,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 alertController.addAction(UIAlertAction(title: "ตกลง",
                                                         style: UIAlertActionStyle.default,
                                                         handler: { (_) in
-                                                            self.performSegue(withIdentifier: "Home", sender: sender)
+                                                            self.performSegue(withIdentifier: "TabBar", sender: sender)
                 }))
                 self.present(alertController, animated: true, completion: nil)
             } else {

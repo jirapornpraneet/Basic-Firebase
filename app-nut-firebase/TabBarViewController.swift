@@ -12,7 +12,7 @@ import FirebaseAuth
 import AVFoundation
 import AZTabBar
 
-class HomeViewController: UIViewController, AZTabBarDelegate {
+class TabBarViewController: UIViewController, AZTabBarDelegate {
 
     var tabController: AZTabBarController!
 
