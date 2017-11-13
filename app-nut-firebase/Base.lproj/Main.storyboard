@@ -22,18 +22,6 @@
                     <view key="view" contentMode="scaleToFill" id="h1F-P1-CsE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-uB-vhj">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.97564977409999998" green="0.92932027579999998" blue="0.93333369489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="T98-JL-B0t" firstAttribute="trailing" secondItem="ttK-uB-vhj" secondAttribute="trailing" id="6jQ-He-8Yy"/>
-                            <constraint firstItem="ttK-uB-vhj" firstAttribute="leading" secondItem="T98-JL-B0t" secondAttribute="leading" id="bb6-Qu-3Xb"/>
-                            <constraint firstItem="T98-JL-B0t" firstAttribute="bottom" secondItem="ttK-uB-vhj" secondAttribute="bottom" id="k8v-n7-abM"/>
-                            <constraint firstItem="ttK-uB-vhj" firstAttribute="top" secondItem="T98-JL-B0t" secondAttribute="top" id="ttb-qQ-uAI"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="T98-JL-B0t"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="cHK-gd-IEk">
@@ -387,7 +375,7 @@ layer.masksToBounds</string>
                         <outlet property="loginButton" destination="vLg-Re-Hyo" id="EAo-v4-quA"/>
                         <outlet property="passwordTextField" destination="pQp-bB-mRb" id="FlO-BH-5CB"/>
                         <outlet property="showPasswordButton" destination="Hpu-B9-EAr" id="hTC-xa-aHX"/>
-                        <segue destination="o8d-f2-Mc5" kind="show" identifier="Home" id="pQY-tX-bPC"/>
+                        <segue destination="o8d-f2-Mc5" kind="show" identifier="TabBar" id="pQY-tX-bPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pf-fl-AuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
