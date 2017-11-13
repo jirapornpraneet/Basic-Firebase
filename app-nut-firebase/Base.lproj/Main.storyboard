@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="Hvg-Sj-FcI">
             <objects>
                 <viewController storyboardIdentifier="Home" id="o8d-f2-Mc5" customClass="HomeViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,41 +23,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="หน้าหลัก" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-BC-Bcc">
-                                <rect key="frame" x="127" y="60" width="121" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="QIF-8G-3Al"/>
-                                    <constraint firstAttribute="width" constant="121" id="dgq-Uo-2L5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                <color key="textColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeV-rn-3Xf">
-                                <rect key="frame" x="109" y="558" width="156" height="45"/>
-                                <color key="backgroundColor" red="0.97400460030000002" green="0.39523335920000002" blue="0.53120841230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Vh9-dV-9Na"/>
-                                    <constraint firstAttribute="width" constant="156" id="dMK-6h-1dC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="ออกสู่ระบบ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutClicked:" destination="o8d-f2-Mc5" eventType="touchUpInside" id="YgM-Ef-y5e"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-uB-vhj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97564977409999998" green="0.92932027579999998" blue="0.93333369489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="AHl-BC-Bcc" firstAttribute="centerX" secondItem="h1F-P1-CsE" secondAttribute="centerX" id="JSa-va-hJD"/>
-                            <constraint firstItem="YeV-rn-3Xf" firstAttribute="centerX" secondItem="h1F-P1-CsE" secondAttribute="centerX" id="NDF-gD-UZf"/>
-                            <constraint firstItem="AHl-BC-Bcc" firstAttribute="top" secondItem="T98-JL-B0t" secondAttribute="top" constant="40" id="sl5-P1-zVn"/>
-                            <constraint firstItem="YeV-rn-3Xf" firstAttribute="top" secondItem="AHl-BC-Bcc" secondAttribute="bottom" constant="477" id="sla-HZ-zed"/>
+                            <constraint firstItem="T98-JL-B0t" firstAttribute="trailing" secondItem="ttK-uB-vhj" secondAttribute="trailing" id="6jQ-He-8Yy"/>
+                            <constraint firstItem="ttK-uB-vhj" firstAttribute="leading" secondItem="T98-JL-B0t" secondAttribute="leading" id="bb6-Qu-3Xb"/>
+                            <constraint firstItem="T98-JL-B0t" firstAttribute="bottom" secondItem="ttK-uB-vhj" secondAttribute="bottom" id="k8v-n7-abM"/>
+                            <constraint firstItem="ttK-uB-vhj" firstAttribute="top" secondItem="T98-JL-B0t" secondAttribute="top" id="ttb-qQ-uAI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T98-JL-B0t"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="cHK-gd-IEk">
+                        <barButtonItem key="leftBarButtonItem" title="Add" id="gbT-bD-Wci"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="Jyg-JF-vjo">
+                            <color key="tintColor" red="0.4956522183" green="0.43534846269999999" blue="0.67011024750000003" alpha="0.98405393839999999" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="logOutClicked:" destination="o8d-f2-Mc5" id="Lqo-Gz-NO4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmC-dA-ELB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,6 +387,7 @@ layer.masksToBounds</string>
                         <outlet property="loginButton" destination="vLg-Re-Hyo" id="EAo-v4-quA"/>
                         <outlet property="passwordTextField" destination="pQp-bB-mRb" id="FlO-BH-5CB"/>
                         <outlet property="showPasswordButton" destination="Hpu-B9-EAr" id="hTC-xa-aHX"/>
+                        <segue destination="o8d-f2-Mc5" kind="show" identifier="Home" id="pQY-tX-bPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pf-fl-AuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
