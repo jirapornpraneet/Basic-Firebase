@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Hvg-Sj-FcI">
             <objects>
                 <viewController storyboardIdentifier="TabBar" id="o8d-f2-Mc5" customClass="TabBarViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="T98-JL-B0t"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="cHK-gd-IEk">
+                    <navigationItem key="navigationItem" id="cHK-gd-IEk">
                         <barButtonItem key="leftBarButtonItem" title="Add" id="gbT-bD-Wci"/>
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="Jyg-JF-vjo">
                             <color key="tintColor" red="0.4956522183" green="0.43534846269999999" blue="0.67011024750000003" alpha="0.98405393839999999" colorSpace="custom" customColorSpace="displayP3"/>
