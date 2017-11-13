@@ -35,11 +35,15 @@
                     </navigationItem>
                     <connections>
                         <segue destination="qYa-0L-LCb" kind="show" identifier="HomeViewController" id="zEm-hr-k80"/>
+                        <segue destination="IKO-MN-Gf1" kind="show" identifier="Search" id="Odq-L4-UCU"/>
+                        <segue destination="13t-eg-t5s" kind="show" identifier="Camera" id="ZDT-6e-4qe"/>
+                        <segue destination="mzs-9r-LfC" kind="show" identifier="Heart" id="Iz8-f5-ovG"/>
+                        <segue destination="ct2-hI-Ige" kind="show" identifier="Account" id="HSc-jH-YuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmC-dA-ELB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="42"/>
+            <point key="canvasLocation" x="942" y="42"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="Ubx-cb-4n4">
@@ -743,7 +747,7 @@ layer.masksToBounds</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVc-kQ-I2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213" y="42"/>
+            <point key="canvasLocation" x="1716" y="42"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="r1T-T9-7mv">
@@ -758,7 +762,7 @@ layer.masksToBounds</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXE-EF-5PD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="42"/>
+            <point key="canvasLocation" x="2375" y="42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nLU-H3-BV8">
@@ -773,7 +777,7 @@ layer.masksToBounds</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5K-ph-muB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="42"/>
+            <point key="canvasLocation" x="3022" y="42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Tj-vg-G8q">
@@ -788,7 +792,7 @@ layer.masksToBounds</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvk-sv-nsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2502" y="42"/>
+            <point key="canvasLocation" x="3650" y="42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OA9-Nc-Ld2">
@@ -803,7 +807,7 @@ layer.masksToBounds</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbw-UH-Qza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2912" y="42"/>
+            <point key="canvasLocation" x="4292" y="42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PfG-sq-c7P">
