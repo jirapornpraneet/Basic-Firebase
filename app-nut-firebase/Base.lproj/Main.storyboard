@@ -745,10 +745,10 @@ layer.masksToBounds</string>
             </objects>
             <point key="canvasLocation" x="1708" y="54"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="r1T-T9-7mv">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="IKO-MN-Gf1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="IKO-MN-Gf1" customClass="SearchViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8UF-lH-YLA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
