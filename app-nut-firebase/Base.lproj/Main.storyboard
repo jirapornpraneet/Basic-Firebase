@@ -764,10 +764,10 @@ layer.masksToBounds</string>
             </objects>
             <point key="canvasLocation" x="2375" y="42"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="nLU-H3-BV8">
             <objects>
-                <viewController storyboardIdentifier="CameraViewController" id="13t-eg-t5s" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="13t-eg-t5s" customClass="CameraViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BCA-8C-hAI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -779,10 +779,10 @@ layer.masksToBounds</string>
             </objects>
             <point key="canvasLocation" x="3022" y="42"/>
         </scene>
-        <!--View Controller-->
+        <!--Feed View Controller-->
         <scene sceneID="3Tj-vg-G8q">
             <objects>
-                <viewController storyboardIdentifier="HeartViewController" id="mzs-9r-LfC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HeartViewController" id="mzs-9r-LfC" customClass="FeedViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTg-zH-GF0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -794,10 +794,10 @@ layer.masksToBounds</string>
             </objects>
             <point key="canvasLocation" x="3650" y="42"/>
         </scene>
-        <!--View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="OA9-Nc-Ld2">
             <objects>
-                <viewController storyboardIdentifier="AccountViewController" id="ct2-hI-Ige" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" id="ct2-hI-Ige" customClass="AccountViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S0h-ak-Kbd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
