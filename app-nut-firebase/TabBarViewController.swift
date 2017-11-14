@@ -50,9 +50,9 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         let myCameraViewController = UIStoryboard(name: "Main",
                                                   bundle: nil)
             .instantiateViewController(withIdentifier: "CameraViewController")
-        let myHeartViewController  = UIStoryboard(name: "Main",
+        let myFeedViewController  = UIStoryboard(name: "Main",
                                                   bundle: nil)
-            .instantiateViewController(withIdentifier: "HeartViewController")
+            .instantiateViewController(withIdentifier: "FeedViewController")
         let myAccountViewController = UIStoryboard(name: "Main",
                                                    bundle: nil)
             .instantiateViewController(withIdentifier: "AccountViewController")
@@ -60,7 +60,7 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         tabController.setViewController(myHomeViewController, atIndex: 0)
         tabController.setViewController(mySearchViewController, atIndex: 1)
         tabController.setViewController(myCameraViewController, atIndex: 2)
-        tabController.setViewController(myHeartViewController, atIndex: 3)
+        tabController.setViewController(myFeedViewController, atIndex: 3)
         tabController.setViewController(myAccountViewController, atIndex: 4)
 
         tabController?.setAction(atIndex: 4) {

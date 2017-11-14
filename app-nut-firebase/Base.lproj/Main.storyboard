@@ -782,7 +782,7 @@ layer.masksToBounds</string>
         <!--Feed View Controller-->
         <scene sceneID="3Tj-vg-G8q">
             <objects>
-                <viewController storyboardIdentifier="HeartViewController" id="mzs-9r-LfC" customClass="FeedViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" id="mzs-9r-LfC" customClass="FeedViewController" customModule="app_nut_firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTg-zH-GF0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
