@@ -10,10 +10,17 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var dateLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE d MMMM yyyy"
+        formatter.timeZone = TimeZone(secondsFromGMT: 7)
+        formatter.locale = Locale(identifier: "th")
+        let result = formatter.string(from: date)
+        dateLabel.text = result
     }
 
     override func viewWillAppear(_ animated: Bool) {

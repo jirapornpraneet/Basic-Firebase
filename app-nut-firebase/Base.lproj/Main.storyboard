@@ -741,13 +741,58 @@ layer.masksToBounds</string>
                     <view key="view" contentMode="scaleToFill" id="cOS-a4-VJU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnc-Pk-hl5">
+                                <rect key="frame" x="15" y="77" width="345" height="570"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD/MM/YYYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUV-1T-jmb">
+                                        <rect key="frame" x="15" y="15" width="315" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="MB9-yD-GMg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <color key="textColor" red="0.90684486040609136" green="0.55202287707092967" blue="0.59414985734909409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XUV-1T-jmb" firstAttribute="leading" secondItem="tnc-Pk-hl5" secondAttribute="leading" constant="15" id="Jdp-t3-H1v"/>
+                                    <constraint firstItem="XUV-1T-jmb" firstAttribute="top" secondItem="tnc-Pk-hl5" secondAttribute="top" constant="15" id="UnY-Uc-iwR"/>
+                                    <constraint firstAttribute="trailing" secondItem="XUV-1T-jmb" secondAttribute="trailing" constant="15" id="mIq-nb-LYD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" value="YES">
+                                        <string key="keyPath">layer.masksToBounds
+accepted
+Yes, I use that a lot but question like this was already answered many times.
+
+But anyway in Interface Builder. You need to add User Defined Runtime Attributes like this:
+
+layer.masksToBounds</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.96256510419999997" green="0.71372549019999998" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="tnc-Pk-hl5" firstAttribute="top" secondItem="sqT-a6-KOa" secondAttribute="top" constant="13" id="PU6-Id-IGq"/>
+                            <constraint firstItem="sqT-a6-KOa" firstAttribute="bottom" secondItem="tnc-Pk-hl5" secondAttribute="bottom" constant="20" id="bg6-Tr-jDX"/>
+                            <constraint firstItem="tnc-Pk-hl5" firstAttribute="leading" secondItem="sqT-a6-KOa" secondAttribute="leading" constant="15" id="cIy-Ih-MtO"/>
+                            <constraint firstItem="sqT-a6-KOa" firstAttribute="trailing" secondItem="tnc-Pk-hl5" secondAttribute="trailing" constant="15" id="wrd-1f-kWj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sqT-a6-KOa"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="XUV-1T-jmb" id="I9C-vc-cZw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVc-kQ-I2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="42"/>
+            <point key="canvasLocation" x="1716" y="41.829085457271368"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="r1T-T9-7mv">
