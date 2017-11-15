@@ -214,10 +214,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
                                 if let urlText = url?.absoluteString {
                                     self.databaseReference
                                         .child("users")
-                                        .child((Auth
-                                            .auth()
-                                            .currentUser?
-                                            .uid)!)
+                                        .child("profileImage")
                                         .updateChildValues(["pic": urlText],
                                                            withCompletionBlock: { (error, _) in
                                                             if error != nil {
