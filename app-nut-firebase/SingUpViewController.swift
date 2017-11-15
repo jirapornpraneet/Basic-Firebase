@@ -245,6 +245,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
                                              style: UIAlertActionStyle.default,
                                              handler: { (_) in
                                                 self.addDatabaseReference()
+                                                self.saveProfileImageView()
                                                 let vc = self.storyboard?
                                                     .instantiateViewController(withIdentifier: "Login")
                                                 self.show(vc!, sender: sender)
