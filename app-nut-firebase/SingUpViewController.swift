@@ -109,10 +109,13 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     }
 
     func addDatabaseReference() {
+        let firstname = firstnameTextField.text
         databaseReference
-            .child("users").child("firstname")
-            .childByAutoId()
-            .setValue(firstnameTextField.text)
+            .child("users")
+            .child("firstname")
+            .updateChildValues(["firstname": firstname!], withCompletionBlock: { (error, _) in
+                print("Error", error!)
+            })
         databaseReference
             .child("users")
             .child("lastname")
