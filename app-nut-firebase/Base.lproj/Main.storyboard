@@ -878,13 +878,29 @@ layer.masksToBounds</string>
                     <view key="view" contentMode="scaleToFill" id="S0h-ak-Kbd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-s7-Qk6">
+                                <rect key="frame" x="115" y="79" width="145" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="MJY-jv-uDO"/>
+                                    <constraint firstAttribute="height" constant="161" id="R0H-Hc-7ou"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.85165375539999999" green="0.84339130159999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="YUW-s7-Qk6" firstAttribute="centerX" secondItem="S0h-ak-Kbd" secondAttribute="centerX" id="9Ed-aP-iJj"/>
+                            <constraint firstItem="YUW-s7-Qk6" firstAttribute="top" secondItem="CHs-71-CG5" secondAttribute="top" constant="15" id="C1q-Fz-IkW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CHs-71-CG5"/>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="YUW-s7-Qk6" id="3wo-Gx-VqT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbw-UH-Qza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4292" y="42"/>
+            <point key="canvasLocation" x="4292" y="41.829085457271368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PfG-sq-c7P">

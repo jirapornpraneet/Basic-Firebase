@@ -7,18 +7,45 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class AccountViewController: UIViewController {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setProfileImageView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setProfileImageView() {
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
+        profileImageView.clipsToBounds = true
+        let databaseReference = Database.database().reference()
+        if  Auth.auth().currentUser != nil {
+            databaseReference
+                .child("users")
+                .child("profileImage")
+                .observeSingleEvent(of:
+                    .value, with: { (snapshot) in
+                        if let dict = snapshot.value as? [String: AnyObject] {
+                            if let profileImageURL = dict["pic"] as? String {
+                                let url = URL(string: profileImageURL)
+                                URLSession.shared.dataTask(with: url!,
+                                                           completionHandler: { (data, _, error) in
+                                                            if error != nil {
+                                                                print(error!)
+                                                                return
+                                                            }
+                                                            DispatchQueue.main.async {
+                                                                self.profileImageView.image = UIImage(data: data!)
+                                                            }
+                                }).resume()
+                            }
+                        }
+                })
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
