@@ -405,14 +405,43 @@ layer.masksToBounds</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_user" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-Lg-KzA">
-                                <rect key="frame" x="162" y="79" width="50" height="50"/>
+                                <rect key="frame" x="162" y="74" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="9ZG-t0-iaW"/>
                                     <constraint firstAttribute="height" constant="50" id="Sgb-HO-sYH"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g3-j0-yHe">
+                                <rect key="frame" x="116" y="134" width="143" height="25"/>
+                                <color key="backgroundColor" red="0.73432503140000005" green="0.63162968949999998" blue="0.90571462560000005" alpha="0.98405393839999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="UNf-18-rOW"/>
+                                    <constraint firstAttribute="height" constant="25" id="wSf-Ou-qtt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="upload image profile">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" value="YES">
+                                        <string key="keyPath">layer.masksToBounds
+accepted
+Yes, I use that a lot but question like this was already answered many times.
+
+But anyway in Interface Builder. You need to add User Defined Runtime Attributes like this:
+
+layer.masksToBounds</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="uploadImageButton:" destination="u43-FJ-gpn" eventType="touchUpInside" id="SPX-p8-rkt"/>
+                                </connections>
+                            </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cx-5R-sp0">
-                                <rect key="frame" x="20" y="139" width="335" height="451"/>
+                                <rect key="frame" x="20" y="164" width="335" height="426"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktb-CJ-1qg">
                                         <rect key="frame" x="20" y="81" width="87" height="21"/>
@@ -701,21 +730,23 @@ layer.masksToBounds</string>
                         </subviews>
                         <color key="backgroundColor" red="0.97564977407455444" green="0.92932027578353882" blue="0.93333369493484497" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6cx-5R-sp0" firstAttribute="top" secondItem="vWm-Lg-KzA" secondAttribute="bottom" constant="10" id="2bC-6H-hGH"/>
                             <constraint firstItem="5I8-B2-UAd" firstAttribute="bottom" secondItem="Lbn-0E-y98" secondAttribute="bottom" id="6d8-SO-DJ1"/>
                             <constraint firstItem="sas-q4-RTf" firstAttribute="centerX" secondItem="Boa-lz-S27" secondAttribute="centerX" id="7rH-cx-r5T"/>
                             <constraint firstItem="Lbn-0E-y98" firstAttribute="bottom" secondItem="sas-q4-RTf" secondAttribute="bottom" constant="24" id="88u-yc-5HU"/>
                             <constraint firstItem="zcn-vd-8nB" firstAttribute="top" secondItem="Boa-lz-S27" secondAttribute="top" id="8rf-OK-ZI7"/>
                             <constraint firstItem="Lbn-0E-y98" firstAttribute="trailing" secondItem="6cx-5R-sp0" secondAttribute="trailing" constant="20" id="BE0-OB-Pin"/>
                             <constraint firstItem="vWm-Lg-KzA" firstAttribute="centerX" secondItem="Boa-lz-S27" secondAttribute="centerX" id="PvL-lc-oOc"/>
+                            <constraint firstItem="3g3-j0-yHe" firstAttribute="top" secondItem="vWm-Lg-KzA" secondAttribute="bottom" constant="10" id="S7q-Yn-BU8"/>
                             <constraint firstItem="zcn-vd-8nB" firstAttribute="leading" secondItem="Lbn-0E-y98" secondAttribute="leading" id="TyJ-IK-c6V"/>
-                            <constraint firstItem="vWm-Lg-KzA" firstAttribute="top" secondItem="Lbn-0E-y98" secondAttribute="top" constant="15" id="Yj2-4e-ABH"/>
+                            <constraint firstItem="vWm-Lg-KzA" firstAttribute="top" secondItem="Lbn-0E-y98" secondAttribute="top" constant="10" id="Yj2-4e-ABH"/>
                             <constraint firstItem="zcn-vd-8nB" firstAttribute="trailing" secondItem="Lbn-0E-y98" secondAttribute="trailing" id="ZIa-Nv-7Z6"/>
                             <constraint firstItem="5I8-B2-UAd" firstAttribute="trailing" secondItem="Lbn-0E-y98" secondAttribute="trailing" id="a57-De-skz"/>
                             <constraint firstItem="5I8-B2-UAd" firstAttribute="leading" secondItem="Lbn-0E-y98" secondAttribute="leading" id="cry-Hy-m6X"/>
+                            <constraint firstItem="3g3-j0-yHe" firstAttribute="centerX" secondItem="Boa-lz-S27" secondAttribute="centerX" id="ebS-eo-fX1"/>
                             <constraint firstItem="6cx-5R-sp0" firstAttribute="leading" secondItem="Lbn-0E-y98" secondAttribute="leading" constant="20" id="hHn-5t-kV1"/>
                             <constraint firstItem="sas-q4-RTf" firstAttribute="top" secondItem="6cx-5R-sp0" secondAttribute="bottom" constant="10" id="hWc-wE-61O"/>
                             <constraint firstItem="zcn-vd-8nB" firstAttribute="bottom" secondItem="Lbn-0E-y98" secondAttribute="bottom" id="jbU-jQ-p9b"/>
+                            <constraint firstItem="6cx-5R-sp0" firstAttribute="top" secondItem="3g3-j0-yHe" secondAttribute="bottom" constant="5" id="nMk-Uo-AXl"/>
                             <constraint firstItem="5I8-B2-UAd" firstAttribute="top" secondItem="Boa-lz-S27" secondAttribute="top" id="rWo-p9-6wU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lbn-0E-y98"/>
@@ -727,12 +758,13 @@ layer.masksToBounds</string>
                         <outlet property="genderSegmentedControl" destination="109-vb-W8s" id="Jhz-2n-Jrk"/>
                         <outlet property="lastnameTextField" destination="g5L-Dq-Sxe" id="QHh-jd-gBT"/>
                         <outlet property="passwordTextField" destination="CVV-a1-IVj" id="aFT-qa-IEa"/>
+                        <outlet property="profileImageView" destination="vWm-Lg-KzA" id="EpD-0l-8NJ"/>
                         <outlet property="singUpButton" destination="sas-q4-RTf" id="YnH-Y5-bSn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzo-po-Rvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-722" y="1492"/>
+            <point key="canvasLocation" x="-722.39999999999998" y="1491.9040479760122"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="lto-Gy-AWN">
