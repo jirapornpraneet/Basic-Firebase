@@ -16,6 +16,7 @@
 		AB062D791FB183AA00C103E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062D781FB183AA00C103E6 /* LoginViewController.swift */; };
 		AB062D7B1FB18B9400C103E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB062D7A1FB18B9400C103E6 /* GoogleService-Info.plist */; };
 		AB062D7E1FB195DA00C103E6 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062D7D1FB195DA00C103E6 /* SingUpViewController.swift */; };
+		AB554C081FBBE70200776985 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB554C071FBBE70200776985 /* CardView.swift */; };
 		AB9ABE151FB1BB5600DB3204 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ABE141FB1BB5600DB3204 /* ResetPasswordViewController.swift */; };
 		ABAE073C1FBAA1F40039C31B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE07371FBAA1F40039C31B /* SearchViewController.swift */; };
 		ABAE073D1FBAA1F40039C31B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE07381FBAA1F40039C31B /* HomeViewController.swift */; };
@@ -38,6 +39,7 @@
 		AB062D781FB183AA00C103E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB062D7A1FB18B9400C103E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB062D7D1FB195DA00C103E6 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
+		AB554C071FBBE70200776985 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AB9ABE141FB1BB5600DB3204 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		ABAE07371FBAA1F40039C31B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		ABAE07381FBAA1F40039C31B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				AB062D651FB172D200C103E6 /* AppDelegate.swift */,
+				AB554C071FBBE70200776985 /* CardView.swift */,
 				AB062D7D1FB195DA00C103E6 /* SingUpViewController.swift */,
 				AB062D781FB183AA00C103E6 /* LoginViewController.swift */,
 				AB9ABE141FB1BB5600DB3204 /* ResetPasswordViewController.swift */,
@@ -286,6 +289,7 @@
 				AB062D7E1FB195DA00C103E6 /* SingUpViewController.swift in Sources */,
 				ABAE07401FBAA1F40039C31B /* AccountViewController.swift in Sources */,
 				AB062D661FB172D200C103E6 /* AppDelegate.swift in Sources */,
+				AB554C081FBBE70200776985 /* CardView.swift in Sources */,
 				ABAE073D1FBAA1F40039C31B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
