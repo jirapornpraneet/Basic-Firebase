@@ -886,15 +886,28 @@ layer.masksToBounds</string>
                                     <constraint firstAttribute="height" constant="161" id="R0H-Hc-7ou"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-sq-Hmv">
+                                <rect key="frame" x="41" y="260" width="292" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1kk-Et-EeV"/>
+                                    <constraint firstAttribute="width" constant="292" id="u9N-dD-GNS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85165375539999999" green="0.84339130159999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Ygq-sq-Hmv" firstAttribute="top" secondItem="YUW-s7-Qk6" secondAttribute="bottom" constant="20" id="4XM-RU-xDJ"/>
                             <constraint firstItem="YUW-s7-Qk6" firstAttribute="centerX" secondItem="S0h-ak-Kbd" secondAttribute="centerX" id="9Ed-aP-iJj"/>
                             <constraint firstItem="YUW-s7-Qk6" firstAttribute="top" secondItem="CHs-71-CG5" secondAttribute="top" constant="15" id="C1q-Fz-IkW"/>
+                            <constraint firstItem="Ygq-sq-Hmv" firstAttribute="centerX" secondItem="S0h-ak-Kbd" secondAttribute="centerX" id="Tmm-BS-h8M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CHs-71-CG5"/>
                     </view>
                     <connections>
+                        <outlet property="firstnameLabel" destination="Ygq-sq-Hmv" id="ZPw-Me-F9j"/>
                         <outlet property="profileImageView" destination="YUW-s7-Qk6" id="3wo-Gx-VqT"/>
                     </connections>
                 </viewController>

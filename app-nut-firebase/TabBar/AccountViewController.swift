@@ -13,10 +13,12 @@ import FirebaseAuth
 class AccountViewController: UIViewController {
 
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var firstnameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setProfileImageView()
+        setShowDataFirstName()
     }
 
     func setProfileImageView() {
@@ -44,6 +46,22 @@ class AccountViewController: UIViewController {
                                 }).resume()
                             }
                         }
+                })
+        }
+    }
+
+    func setShowDataFirstName() {
+        let databaseReference = Database.database().reference()
+        if  Auth.auth().currentUser != nil {
+            databaseReference
+                .child("users")
+                .child("firstname").observeSingleEvent(of: .value, with: { (snapshot) in
+                    if let dict = snapshot.value as? [String: AnyObject] {
+                        let firstnameString = dict["firstname"] as? String
+                        self.firstnameLabel.text = firstnameString
+                    }
+                }, withCancel: { (error) in
+                    print("Error", error)
                 })
         }
     }
