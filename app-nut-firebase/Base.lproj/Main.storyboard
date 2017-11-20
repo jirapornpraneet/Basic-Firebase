@@ -773,7 +773,7 @@ layer.masksToBounds</string>
                                                         </connections>
                                                     </button>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-lf-vx7">
-                                                        <rect key="frame" x="20" y="130" width="280" height="430"/>
+                                                        <rect key="frame" x="20" y="130" width="280" height="420"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeM-DL-f5H">
                                                                 <rect key="frame" x="20" y="83" width="87" height="21"/>
@@ -1028,11 +1028,10 @@ layer.masksToBounds</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpf-eV-guV">
-                                                        <rect key="frame" x="17" y="580" width="286" height="30"/>
+                                                        <rect key="frame" x="17" y="570" width="286" height="40"/>
                                                         <color key="backgroundColor" red="0.55846950780000004" green="0.50654744559999998" blue="0.82193845180000003" alpha="0.98405393839999999" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="6Kq-3h-Nyp"/>
-                                                            <constraint firstAttribute="height" constant="30" id="fNE-ic-Osk"/>
+                                                            <constraint firstAttribute="height" constant="40" id="fNE-ic-Osk"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <state key="normal" title="Sing Up">
