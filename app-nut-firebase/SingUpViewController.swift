@@ -109,38 +109,60 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     }
 
     func addDatabaseReference() {
-        let firstname = firstnameTextField.text
         databaseReference
             .child("users")
-            .child("firstname")
-            .updateChildValues(["firstname": firstname!], withCompletionBlock: { (error, _) in
-                print("Error", error!)
+            .child((Auth.auth().currentUser?.uid)!)
+            .updateChildValues(["firstname": firstnameTextField.text!], withCompletionBlock: { (error, _) in
+                if error != nil {
+                    print("Error", error!)
+                    return
+                }
             })
         databaseReference
             .child("users")
-            .child("lastname")
-            .childByAutoId()
-            .setValue(lastnameTextField.text)
+            .child((Auth.auth().currentUser?.uid)!)
+            .updateChildValues(["lastname": lastnameTextField.text!], withCompletionBlock: { (error, _) in
+                if error != nil {
+                    print("Error", error!)
+                    return
+                }
+            })
         databaseReference
             .child("users")
-            .child("gender")
-            .childByAutoId()
-            .setValue(genderName)
+            .child((Auth.auth().currentUser?.uid)!)
+            .updateChildValues(["gender": genderName], withCompletionBlock: { (error, _) in
+                if error != nil {
+                    print("Error", error!)
+                    return
+                }
+            })
         databaseReference
             .child("users")
-            .child("email")
-            .childByAutoId()
-            .setValue(emailTextField.text)
+            .child((Auth.auth().currentUser?.uid)!)
+            .updateChildValues(["email": emailTextField.text!], withCompletionBlock: { (error, _) in
+                if error != nil {
+                    print("Error", error!)
+                    return
+                }
+            })
         databaseReference
             .child("users")
-            .child("password")
-            .childByAutoId()
-            .setValue(passwordTextField.text)
+            .child((Auth.auth().currentUser?.uid)!)
+            .updateChildValues(["password": passwordTextField.text!], withCompletionBlock: { (error, _) in
+                if error != nil {
+                    print("Error", error!)
+                    return
+                }
+            })
         databaseReference
             .child("users")
-            .child("confirmPassword")
-            .childByAutoId()
-            .setValue(confirmPasswordTextField.text)
+            .child((Auth.auth().currentUser?.uid)!)
+            .updateChildValues(["confirmpassword": confirmPasswordTextField.text!], withCompletionBlock: { (error, _) in
+                if error != nil {
+                    print("Error", error!)
+                    return
+                }
+            })
     }
 
     func setProfileImageView() {
@@ -217,7 +239,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
                                 if let urlText = url?.absoluteString {
                                     self.databaseReference
                                         .child("users")
-                                        .child("profileImage")
+                                        .child((Auth.auth().currentUser?.uid)!)
                                         .updateChildValues(["pic": urlText],
                                                            withCompletionBlock: { (error, _) in
                                                             if error != nil {
