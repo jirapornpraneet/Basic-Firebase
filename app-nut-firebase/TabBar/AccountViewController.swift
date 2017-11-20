@@ -14,21 +14,24 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var firstnameLabel: UILabel!
+    @IBOutlet weak var lastnameLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setProfileImageView()
-        setShowDataFirstName()
+        setShowData()
     }
 
     func setProfileImageView() {
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
         profileImageView.clipsToBounds = true
         let databaseReference = Database.database().reference()
-        if  Auth.auth().currentUser != nil {
+        if  let uid = Auth.auth().currentUser?.uid {
             databaseReference
                 .child("users")
-                .child("profileImage")
+                .child(uid)
                 .observeSingleEvent(of:
                     .value, with: { (snapshot) in
                         if let dict = snapshot.value as? [String: AnyObject] {
@@ -50,15 +53,23 @@ class AccountViewController: UIViewController {
         }
     }
 
-    func setShowDataFirstName() {
+    func setShowData() {
         let databaseReference = Database.database().reference()
-        if  Auth.auth().currentUser != nil {
+        if  let uid = Auth.auth().currentUser?.uid {
             databaseReference
                 .child("users")
-                .child("firstname").observeSingleEvent(of: .value, with: { (snapshot) in
+                .child(uid)
+                .observeSingleEvent(of: .value, with: { (snapshot) in
                     if let dict = snapshot.value as? [String: AnyObject] {
                         let firstnameString = dict["firstname"] as? String
+                        let lastnameString = dict["lastname"] as? String
+                        let genderString = dict["gender"] as? String
+                        let emailString = dict["email"] as? String
                         self.firstnameLabel.text = firstnameString
+                        self.lastnameLabel.text = lastnameString
+                        self.genderLabel.text = genderString
+                        self.emailLabel.text = emailString
+                        
                     }
                 }, withCancel: { (error) in
                     print("Error", error)
