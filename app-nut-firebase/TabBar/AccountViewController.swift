@@ -69,7 +69,6 @@ class AccountViewController: UIViewController {
                         self.lastnameLabel.text = lastnameString
                         self.genderLabel.text = genderString
                         self.emailLabel.text = emailString
-                        
                     }
                 }, withCancel: { (error) in
                     print("Error", error)
