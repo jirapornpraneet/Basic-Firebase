@@ -25,12 +25,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var datePicker: UIDatePicker!
 
     var referense: DatabaseReference?
+    var handle: DatabaseHandle?
+    var dateString: String?
     var balancesString: [String] = []
     var datesString: [String] = []
     var incomesString: [String] = []
     var expensesString: [String] = []
-    var handle: DatabaseHandle?
-    var dateString: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,32 +38,34 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dateFormatter.dateFormat =  "dd-MM-yyyy"
         let date = dateFormatter.string(from: datePicker.date)
         dateString = date
+        getDataToStringArray()
+    }
 
+    func getDataToStringArray() {
         referense = Database.database().reference()
         if let uid = Auth.auth().currentUser?.uid {
-        handle = referense?
-            .child("users")
-            .child(uid)
-            .child("account")
-            .child("balance")
-            .observe(.childAdded, with: { (snapshot) in
-            if let item = snapshot.value as? String {
-                self.balancesString.append(item)
-                self.tableview.reloadData()
-            }
-        })
+            handle = referense?
+                .child("users")
+                .child(uid)
+                .child("account")
+                .child("balance")
+                .observe(.childAdded, with: { (snapshot) in
+                    if let item = snapshot.value as? String {
+                        self.balancesString.append(item)
+                        self.tableview.reloadData()
+                    }
+                })
             referense?
                 .child("users")
                 .child(uid)
                 .child("account")
                 .child("date")
                 .observe(.childAdded, with: { (snapshot) in
-                if let item = snapshot.value as? String {
-                    print("Item", item)
-                    self.datesString.append(item)
-                    self.tableview.reloadData()
-                }
-            })
+                    if let item = snapshot.value as? String {
+                        self.datesString.append(item)
+                        self.tableview.reloadData()
+                    }
+                })
             referense?
                 .child("users")
                 .child(uid)
@@ -71,7 +73,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 .child("incomes")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
-                        print("Item", item)
                         self.incomesString.append(item)
                         self.tableview.reloadData()
                     }
@@ -83,7 +84,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 .child("expenses")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
-                        print("Item", item)
                         self.expensesString.append(item)
                         self.tableview.reloadData()
                     }
