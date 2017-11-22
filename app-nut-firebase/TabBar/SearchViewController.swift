@@ -8,32 +8,54 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var incomeTextField: UITextField!
+    @IBOutlet weak var expensesTextField: UITextField!
+    @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var tableview: UITableView!
 
     var referense: DatabaseReference?
-    var listsUserName: [String] = []
+    var listsBalance: [String] = []
     var handle: DatabaseHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         referense = Database.database().reference()
-        handle = referense?.child("users").observe(.childAdded, with: { (snapshot) in
+        if let uid = Auth.auth().currentUser?.uid {
+        handle = referense?
+            .child("users")
+            .child(uid)
+            .child("account")
+            .child("balance")
+            .observe(.childAdded, with: { (snapshot) in
             if let item = snapshot.value as? String {
-                self.listsUserName.append(item)
+                self.listsBalance.append(item)
                 self.tableview.reloadData()
             }
         })
+        }
     }
 
     @IBAction func saveButtonClicked(_ sender: Any) {
-        referense = Database.database().reference()
-        if userNameTextField.text != "" {
-            referense?.child("users").childByAutoId().setValue(userNameTextField.text)
-            userNameTextField.text = ""
+        if incomeTextField.text != "" && expensesTextField.text != "" {
+            let income = Int(incomeTextField.text!)
+            let expenses = Int(expensesTextField.text!)
+            let balance = Int(income! - expenses!)
+            let balanceString = String(balance)
+            referense = Database.database().reference()
+            if  let uid = Auth.auth().currentUser?.uid {
+                referense?
+                    .child("users")
+                    .child(uid)
+                    .child("account")
+                    .child("balance")
+                    .childByAutoId()
+                    .setValue(balanceString)
+            balanceLabel.text = balanceString
+            }
         }
     }
 
@@ -41,18 +63,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.topItem?.title = "Search"
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 
+        return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listsUserName.count
+        return listsBalance.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = listsUserName[indexPath.row]
+        cell.textLabel?.text = listsBalance[indexPath.row]
         return cell
     }
 }
