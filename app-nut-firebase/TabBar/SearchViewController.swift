@@ -25,8 +25,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var datePicker: UIDatePicker!
 
     var referense: DatabaseReference?
-    var listsBalance: [String] = []
-    var listsDate: [String] = []
+    var balancesString: [String] = []
+    var datesString: [String] = []
+    var incomesString: [String] = []
+    var expensesString: [String] = []
     var handle: DatabaseHandle?
     var dateString: String?
 
@@ -46,7 +48,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             .child("balance")
             .observe(.childAdded, with: { (snapshot) in
             if let item = snapshot.value as? String {
-                self.listsBalance.append(item)
+                self.balancesString.append(item)
                 self.tableview.reloadData()
             }
         })
@@ -58,10 +60,34 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 .observe(.childAdded, with: { (snapshot) in
                 if let item = snapshot.value as? String {
                     print("Item", item)
-                    self.listsDate.append(item)
+                    self.datesString.append(item)
                     self.tableview.reloadData()
                 }
             })
+            referense?
+                .child("users")
+                .child(uid)
+                .child("account")
+                .child("incomes")
+                .observe(.childAdded, with: { (snapshot) in
+                    if let item = snapshot.value as? String {
+                        print("Item", item)
+                        self.incomesString.append(item)
+                        self.tableview.reloadData()
+                    }
+                })
+            referense?
+                .child("users")
+                .child(uid)
+                .child("account")
+                .child("expenses")
+                .observe(.childAdded, with: { (snapshot) in
+                    if let item = snapshot.value as? String {
+                        print("Item", item)
+                        self.expensesString.append(item)
+                        self.tableview.reloadData()
+                    }
+                })
         }
     }
 
@@ -74,9 +100,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBAction func saveButtonClicked(_ sender: Any) {
         if incomesTextField.text != "" && expensesTextField.text != "" {
-            let income = Int(incomesTextField.text!)
+            let incomes = Int(incomesTextField.text!)
             let expenses = Int(expensesTextField.text!)
-            let balance = Int(income! - expenses!)
+            let balance = Int(incomes! - expenses!)
             let balanceString = String(balance)
             referense = Database.database().reference()
             if  let uid = Auth.auth().currentUser?.uid {
@@ -87,6 +113,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     .child("date")
                     .childByAutoId()
                     .setValue(dateString)
+                referense?
+                    .child("users")
+                    .child(uid)
+                    .child("account")
+                    .child("incomes")
+                    .childByAutoId()
+                    .setValue(incomesTextField.text!)
+                referense?
+                    .child("users")
+                    .child(uid)
+                    .child("account")
+                    .child("expenses")
+                    .childByAutoId()
+                    .setValue(expensesTextField.text!)
                 referense?
                     .child("users")
                     .child(uid)
@@ -103,18 +143,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController?.navigationBar.topItem?.title = "Search"
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listsBalance.count
+        return balancesString.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? AccountTableViewCell
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 140
-        cell?.dateLabel.text = listsDate[indexPath.row]
-        cell?.incomesLabel.text = "9999"
-        cell?.expensesLabel.text = "8888"
-        cell?.balanceLabel.text = listsBalance[indexPath.row]
+            cell?.dateLabel.text = datesString[indexPath.row]
+            cell?.incomesLabel.text = incomesString[indexPath.row]
+            cell?.expensesLabel.text = expensesString[indexPath.row]
+            cell?.balanceLabel.text = balancesString[indexPath.row]
         return cell!
     }
 }
