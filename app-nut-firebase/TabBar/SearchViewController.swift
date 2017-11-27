@@ -23,8 +23,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var datePicker: UIDatePicker!
 
-    var referense: DatabaseReference?
     var handle: DatabaseHandle?
+    var databaseReference = Database.database().reference()
     var dateString: String?
     var balancesString: [String] = []
     var datesString: [String] = []
@@ -37,7 +37,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dateFormatter.dateFormat =  "dd-MM-yyyy"
         let date = dateFormatter.string(from: datePicker.date)
         dateString = date
+        
         getDataToStringArray()
+        
         let tapGestureRecognizerKeyboard: UITapGestureRecognizer =
             UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGestureRecognizerKeyboard)
@@ -64,9 +66,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func getDataToStringArray() {
-        referense = Database.database().reference()
         if let uid = Auth.auth().currentUser?.uid {
-            handle = referense?
+            handle = databaseReference
                 .child("users")
                 .child(uid)
                 .child("accounts")
@@ -79,7 +80,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.tableview.reloadData()
                     }
                 })
-            referense?
+            databaseReference
                 .child("users")
                 .child(uid)
                 .child("accounts")
@@ -91,7 +92,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.tableview.reloadData()
                     }
                 })
-            referense?
+            databaseReference
                 .child("users")
                 .child(uid)
                 .child("accounts")
@@ -104,7 +105,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.tableview.reloadData()
                     }
                 })
-            referense?
+            databaseReference
                 .child("users")
                 .child(uid)
                 .child("accounts")
@@ -126,9 +127,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let expenses = Int(expensesTextField.text!)
             let balance = Int(incomes! - expenses!)
             let balanceString = String(balance)
-            referense = Database.database().reference()
             if  let uid = Auth.auth().currentUser?.uid {
-                referense?
+                databaseReference
                     .child("users")
                     .child(uid)
                     .child("accounts")
@@ -140,7 +140,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                             self.tableview.reloadData()
                         }
                     })
-                referense?
+                databaseReference
                     .child("users")
                     .child(uid)
                     .child("accounts")
@@ -149,7 +149,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     .child("incomes")
                     .childByAutoId()
                     .setValue(incomesTextField.text!)
-                referense?
+                databaseReference
                     .child("users")
                     .child(uid)
                     .child("accounts")
@@ -158,7 +158,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     .child("expenses")
                     .childByAutoId()
                     .setValue(expensesTextField.text!)
-                referense?
+                databaseReference
                     .child("users")
                     .child(uid)
                     .child("accounts")
