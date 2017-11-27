@@ -37,9 +37,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dateFormatter.dateFormat =  "dd-MM-yyyy"
         let date = dateFormatter.string(from: datePicker.date)
         dateString = date
-        
+
         getDataToStringArray()
-        
+
         let tapGestureRecognizerKeyboard: UITapGestureRecognizer =
             UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGestureRecognizerKeyboard)
@@ -54,6 +54,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dateFormatter.dateFormat =  "dd-MM-yyyy"
         let date = dateFormatter.string(from: datePicker.date)
         dateString = date
+        getDataToStringArray()
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -67,32 +68,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func getDataToStringArray() {
         if let uid = Auth.auth().currentUser?.uid {
+            incomesString.removeAll()
             handle = databaseReference
-                .child("users")
-                .child(uid)
-                .child("accounts")
-                .child("date")
-                .child(dateString!)
-                .child("balances")
-                .observe(.childAdded, with: { (snapshot) in
-                    if let item = snapshot.value as? String {
-                        self.balancesString.append(item)
-                        self.tableview.reloadData()
-                    }
-                })
-            databaseReference
-                .child("users")
-                .child(uid)
-                .child("accounts")
-                .child("date")
-                .child(dateString!)
-                .observe(.childAdded, with: { (snapshot) in
-                    if let item = snapshot.value as? String {
-                        self.datesString.append(item)
-                        self.tableview.reloadData()
-                    }
-                })
-            databaseReference
                 .child("users")
                 .child(uid)
                 .child("accounts")
@@ -105,6 +82,37 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.tableview.reloadData()
                     }
                 })
+            
+                balancesString.removeAll()
+                databaseReference
+                .child("users")
+                .child(uid)
+                .child("accounts")
+                .child("date")
+                .child(dateString!)
+                .child("balances")
+                .observe(.childAdded, with: { (snapshot) in
+                    if let item = snapshot.value as? String {
+                        self.balancesString.append(item)
+                        self.tableview.reloadData()
+                    }
+                })
+            
+            datesString.removeAll()
+            databaseReference
+                .child("users")
+                .child(uid)
+                .child("accounts")
+                .child("date")
+                .child(dateString!)
+                .observe(.childAdded, with: { (snapshot) in
+                    if let item = snapshot.value as? String {
+                        self.datesString.append(item)
+                        self.tableview.reloadData()
+                    }
+                })
+            
+            expensesString.removeAll()
             databaseReference
                 .child("users")
                 .child(uid)
@@ -183,7 +191,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return balancesString.count
+        let stringCount = balancesString.count
+        if stringCount != 0 {
+            return balancesString.count
+        } else {
+            return 0
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
