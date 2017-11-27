@@ -68,58 +68,41 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func getDataToStringArray() {
         if let uid = Auth.auth().currentUser?.uid {
-            incomesString.removeAll()
-            handle = databaseReference
+            let childData = databaseReference
                 .child("users")
                 .child(uid)
                 .child("accounts")
                 .child("date")
                 .child(dateString!)
-                .child("incomes")
+
+            incomesString.removeAll()
+            handle = childData.child("incomes")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
                         self.incomesString.append(item)
                         self.tableview.reloadData()
                     }
                 })
-            
+
                 balancesString.removeAll()
-                databaseReference
-                .child("users")
-                .child(uid)
-                .child("accounts")
-                .child("date")
-                .child(dateString!)
-                .child("balances")
+                childData.child("balances")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
                         self.balancesString.append(item)
                         self.tableview.reloadData()
                     }
                 })
-            
+
             datesString.removeAll()
-            databaseReference
-                .child("users")
-                .child(uid)
-                .child("accounts")
-                .child("date")
-                .child(dateString!)
-                .observe(.childAdded, with: { (snapshot) in
+            childData.observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
                         self.datesString.append(item)
                         self.tableview.reloadData()
                     }
                 })
-            
+
             expensesString.removeAll()
-            databaseReference
-                .child("users")
-                .child(uid)
-                .child("accounts")
-                .child("date")
-                .child(dateString!)
-                .child("expenses")
+            childData.child("expenses")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
                         self.expensesString.append(item)
@@ -136,43 +119,29 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let balance = Int(incomes! - expenses!)
             let balanceString = String(balance)
             if  let uid = Auth.auth().currentUser?.uid {
-                databaseReference
+                let childData = databaseReference
                     .child("users")
                     .child(uid)
                     .child("accounts")
                     .child("date")
                     .child(dateString!)
-                    .observe(.childAdded, with: { (snapshot) in
-                        if let item = snapshot.value as? String {
-                            self.datesString.append(item)
-                            self.tableview.reloadData()
-                        }
-                    })
-                databaseReference
-                    .child("users")
-                    .child(uid)
-                    .child("accounts")
-                    .child("date")
-                    .child(dateString!)
-                    .child("incomes")
+
+                childData.observe(.childAdded, with: { (snapshot) in
+                    if let item = snapshot.value as? String {
+                        self.datesString.append(item)
+                        self.tableview.reloadData()
+                    }
+                })
+
+                childData.child("incomes")
                     .childByAutoId()
                     .setValue(incomesTextField.text!)
-                databaseReference
-                    .child("users")
-                    .child(uid)
-                    .child("accounts")
-                    .child("date")
-                    .child(dateString!)
-                    .child("expenses")
+
+                childData.child("expenses")
                     .childByAutoId()
                     .setValue(expensesTextField.text!)
-                databaseReference
-                    .child("users")
-                    .child(uid)
-                    .child("accounts")
-                    .child("date")
-                    .child(dateString!)
-                    .child("balances")
+
+                childData.child("balances")
                     .childByAutoId()
                     .setValue(balanceString)
             }
