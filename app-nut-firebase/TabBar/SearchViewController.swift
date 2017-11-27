@@ -47,8 +47,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             handle = referense?
                 .child("users")
                 .child(uid)
-                .child("account")
-                .child("balance")
+                .child("accounts")
+                .child("balances")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
                         self.balancesString.append(item)
@@ -58,7 +58,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             referense?
                 .child("users")
                 .child(uid)
-                .child("account")
+                .child("accounts")
                 .child("date")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
@@ -69,7 +69,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             referense?
                 .child("users")
                 .child(uid)
-                .child("account")
+                .child("accounts")
                 .child("incomes")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
@@ -80,7 +80,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             referense?
                 .child("users")
                 .child(uid)
-                .child("account")
+                .child("accounts")
                 .child("expenses")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
@@ -109,29 +109,29 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 referense?
                     .child("users")
                     .child(uid)
-                    .child("account")
+                    .child("accounts")
                     .child("date")
                     .childByAutoId()
                     .setValue(dateString)
                 referense?
                     .child("users")
                     .child(uid)
-                    .child("account")
+                    .child("accounts")
                     .child("incomes")
                     .childByAutoId()
                     .setValue(incomesTextField.text!)
                 referense?
                     .child("users")
                     .child(uid)
-                    .child("account")
+                    .child("accounts")
                     .child("expenses")
                     .childByAutoId()
                     .setValue(expensesTextField.text!)
                 referense?
                     .child("users")
                     .child(uid)
-                    .child("account")
-                    .child("balance")
+                    .child("accounts")
+                    .child("balances")
                     .childByAutoId()
                     .setValue(balanceString)
             }
