@@ -23,7 +23,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var expensesTextField: UITextField!
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var datePicker: UIDatePicker!
-
+    
     var referense: DatabaseReference?
     var handle: DatabaseHandle?
     var dateString: String?
@@ -39,6 +39,23 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let date = dateFormatter.string(from: datePicker.date)
         dateString = date
         getDataToStringArray()
+
+        let tapGestureRecognizerKeyboard: UITapGestureRecognizer =
+            UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGestureRecognizerKeyboard)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == incomesTextField {
+            expensesTextField.becomeFirstResponder()
+        } else if textField == expensesTextField {
+           saveButtonClicked(self)
+        }
+        return true
     }
 
     func getDataToStringArray() {
