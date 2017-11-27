@@ -168,6 +168,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     .childByAutoId()
                     .setValue(balanceString)
             }
+            incomesTextField.text = ""
+            expensesTextField.text = ""
         }
     }
 
