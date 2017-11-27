@@ -483,7 +483,7 @@ layer.masksToBounds</string>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" value="YES">
                                                 <string key="keyPath">layer.masksToBounds
@@ -646,7 +646,7 @@ layer.masksToBounds</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7Y-Cj-1zS">
-                                        <rect key="frame" x="115.5" y="8" width="163" height="30"/>
+                                        <rect key="frame" x="121" y="8" width="163" height="30"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="YDj-K2-bM5"/>
@@ -654,7 +654,7 @@ layer.masksToBounds</string>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" value="YES">
                                                 <string key="keyPath">layer.masksToBounds
@@ -675,7 +675,7 @@ layer.masksToBounds</string>
                                 <constraints>
                                     <constraint firstItem="uy9-YL-qYD" firstAttribute="leading" secondItem="uBT-aR-QA0" secondAttribute="leading" constant="19" id="4hz-4F-V6O"/>
                                     <constraint firstItem="T7Y-Cj-1zS" firstAttribute="baseline" secondItem="uy9-YL-qYD" secondAttribute="baseline" id="6Ym-dQ-FZo"/>
-                                    <constraint firstItem="T7Y-Cj-1zS" firstAttribute="leading" secondItem="uy9-YL-qYD" secondAttribute="trailing" constant="22" id="NEE-Sm-ztT"/>
+                                    <constraint firstItem="T7Y-Cj-1zS" firstAttribute="leading" secondItem="uy9-YL-qYD" secondAttribute="trailing" constant="27.5" id="NEE-Sm-ztT"/>
                                     <constraint firstItem="uy9-YL-qYD" firstAttribute="top" secondItem="uBT-aR-QA0" secondAttribute="top" constant="13" id="dyw-9g-7Xb"/>
                                     <constraint firstAttribute="height" constant="45" id="skr-Y4-Tfy"/>
                                 </constraints>
