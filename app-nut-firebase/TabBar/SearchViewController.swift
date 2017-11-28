@@ -161,7 +161,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75
+        return 55
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
