@@ -539,51 +539,51 @@ layer.masksToBounds</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXU-Vg-YX7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXU-Vg-YX7">
                                 <rect key="frame" x="0.0" y="269" width="320" height="299"/>
                                 <color key="backgroundColor" red="1" green="0.9181210944" blue="0.92739516870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="70" id="8jl-lP-umv" customClass="AccountTableViewCell" customModule="app_nut_firebase" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="55" id="8jl-lP-umv" customClass="AccountTableViewCell" customModule="app_nut_firebase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8jl-lP-umv" id="mKE-Yo-Ug3">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfH-43-1KK">
-                                                    <rect key="frame" x="18.5" y="42" width="74" height="18"/>
+                                                    <rect key="frame" x="18.5" y="34" width="74" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="74" id="HsY-gv-yEh"/>
-                                                        <constraint firstAttribute="height" constant="18" id="P2n-Vt-dgd"/>
+                                                        <constraint firstAttribute="height" constant="15" id="P2n-Vt-dgd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX2-dp-fpX">
-                                                    <rect key="frame" x="230" y="42" width="74" height="18"/>
+                                                    <rect key="frame" x="230" y="34" width="74" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="74" id="OwR-9A-lmH"/>
-                                                        <constraint firstAttribute="height" constant="18" id="X4i-WW-hhP"/>
+                                                        <constraint firstAttribute="height" constant="15" id="X4i-WW-hhP"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incomes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-Fj-g36">
-                                                    <rect key="frame" x="26.5" y="13" width="58" height="21"/>
+                                                    <rect key="frame" x="26.5" y="11" width="58" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="58" id="58G-E8-E3z"/>
-                                                        <constraint firstAttribute="height" constant="21" id="YpU-qx-m4O"/>
+                                                        <constraint firstAttribute="height" constant="15" id="YpU-qx-m4O"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expenses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkL-Xs-7xD">
-                                                    <rect key="frame" x="124.5" y="13" width="71" height="21"/>
+                                                    <rect key="frame" x="124.5" y="11" width="71" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="H5D-xt-ZPc"/>
+                                                        <constraint firstAttribute="height" constant="15" id="H5D-xt-ZPc"/>
                                                         <constraint firstAttribute="width" constant="71" id="ZSQ-a0-sbm"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -591,9 +591,9 @@ layer.masksToBounds</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUQ-Gy-cL3">
-                                                    <rect key="frame" x="237.5" y="13" width="58" height="21"/>
+                                                    <rect key="frame" x="237.5" y="11" width="58" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="KmZ-sD-das"/>
+                                                        <constraint firstAttribute="height" constant="15" id="KmZ-sD-das"/>
                                                         <constraint firstAttribute="width" constant="58" id="Tye-0i-vEb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -601,9 +601,9 @@ layer.masksToBounds</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2W-MZ-b1k">
-                                                    <rect key="frame" x="123" y="42" width="74" height="18"/>
+                                                    <rect key="frame" x="123" y="34" width="74" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="MiF-4I-ayf"/>
+                                                        <constraint firstAttribute="height" constant="15" id="MiF-4I-ayf"/>
                                                         <constraint firstAttribute="width" constant="74" id="ok9-wG-kjR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -611,14 +611,14 @@ layer.masksToBounds</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpp-jI-qrC">
-                                                    <rect key="frame" x="105" y="0.0" width="1" height="70"/>
+                                                    <rect key="frame" x="105" y="0.0" width="1" height="54.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="1" id="huf-ME-Qtn"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6V-tP-CQU">
-                                                    <rect key="frame" x="214" y="0.0" width="1" height="70"/>
+                                                    <rect key="frame" x="214" y="0.0" width="1" height="54.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="1" id="y2g-qt-8Sx"/>
@@ -629,7 +629,7 @@ layer.masksToBounds</string>
                                             <constraints>
                                                 <constraint firstItem="h6V-tP-CQU" firstAttribute="top" secondItem="mKE-Yo-Ug3" secondAttribute="top" id="2nZ-zU-CAi"/>
                                                 <constraint firstAttribute="bottom" secondItem="h6V-tP-CQU" secondAttribute="bottom" id="5EN-3f-YVR"/>
-                                                <constraint firstItem="DUQ-Gy-cL3" firstAttribute="top" secondItem="mKE-Yo-Ug3" secondAttribute="topMargin" constant="2" id="5pE-J0-t5A"/>
+                                                <constraint firstItem="DUQ-Gy-cL3" firstAttribute="top" secondItem="mKE-Yo-Ug3" secondAttribute="topMargin" id="5pE-J0-t5A"/>
                                                 <constraint firstItem="h6V-tP-CQU" firstAttribute="leading" secondItem="v2W-MZ-b1k" secondAttribute="trailing" constant="17" id="6PW-OT-bDo"/>
                                                 <constraint firstItem="SX2-dp-fpX" firstAttribute="top" secondItem="DUQ-Gy-cL3" secondAttribute="bottom" constant="8" id="9Tk-xe-nGA"/>
                                                 <constraint firstItem="v2W-MZ-b1k" firstAttribute="top" secondItem="dkL-Xs-7xD" secondAttribute="bottom" constant="8" id="CH0-0M-yPO"/>
@@ -642,9 +642,9 @@ layer.masksToBounds</string>
                                                 <constraint firstAttribute="bottom" secondItem="Vpp-jI-qrC" secondAttribute="bottom" id="d1Y-6b-0nB"/>
                                                 <constraint firstItem="Vpp-jI-qrC" firstAttribute="leading" secondItem="Pwp-Fj-g36" secondAttribute="trailing" constant="20.5" id="ejk-qI-8vp"/>
                                                 <constraint firstItem="v2W-MZ-b1k" firstAttribute="leading" secondItem="Vpp-jI-qrC" secondAttribute="trailing" constant="17" id="gMw-Lz-Q8t"/>
-                                                <constraint firstItem="dkL-Xs-7xD" firstAttribute="top" secondItem="mKE-Yo-Ug3" secondAttribute="topMargin" constant="2" id="on3-ZW-cWn"/>
+                                                <constraint firstItem="dkL-Xs-7xD" firstAttribute="top" secondItem="mKE-Yo-Ug3" secondAttribute="topMargin" id="on3-ZW-cWn"/>
                                                 <constraint firstItem="dkL-Xs-7xD" firstAttribute="centerX" secondItem="mKE-Yo-Ug3" secondAttribute="centerX" id="r8u-cI-CWq"/>
-                                                <constraint firstItem="Pwp-Fj-g36" firstAttribute="top" secondItem="mKE-Yo-Ug3" secondAttribute="topMargin" constant="2" id="uLL-RD-EUk"/>
+                                                <constraint firstItem="Pwp-Fj-g36" firstAttribute="top" secondItem="mKE-Yo-Ug3" secondAttribute="topMargin" id="uLL-RD-EUk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.9181210944" blue="0.92739516870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
