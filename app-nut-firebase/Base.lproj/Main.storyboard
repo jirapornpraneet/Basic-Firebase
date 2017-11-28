@@ -457,7 +457,7 @@ layer.masksToBounds</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="K0z-qs-8xB">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="K0z-qs-8xB">
                                 <rect key="frame" x="-4.5" y="69" width="329" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="Dc0-6N-Hip"/>
