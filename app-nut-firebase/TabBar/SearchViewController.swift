@@ -166,12 +166,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let balancesStringCount = balancesString.count
         let incomesStringCount = incomesString.count
-        let expensesStringCount = expensesString.count
-        let sumStringCount = (balancesStringCount + incomesStringCount + expensesStringCount)
-        let stringCount = (sumStringCount / 3)
-        return stringCount
+        if incomesStringCount != 0 {
+            return incomesStringCount
+        } else {
+            return 0
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
