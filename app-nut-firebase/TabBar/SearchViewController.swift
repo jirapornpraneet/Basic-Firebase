@@ -54,6 +54,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dateFormatter.dateFormat =  "dd-MM-yyyy"
         let date = dateFormatter.string(from: datePicker.date)
         dateString = date
+        datePicker.minuteInterval = 60
         getDataToStringArray()
     }
 
