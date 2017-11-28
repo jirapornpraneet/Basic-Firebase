@@ -101,8 +101,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     }
                 })
 
-                balancesString.removeAll()
-                childData.child("balances")
+            balancesString.removeAll()
+            childData.child("balances")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
                         self.balancesString.append(item)
@@ -160,12 +160,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let stringCount = balancesString.count
-        if stringCount != 0 {
-            return balancesString.count
-        } else {
-            return 0
-        }
+        let balancesStringCount = balancesString.count
+        let incomesStringCount = incomesString.count
+        let expensesStringCount = expensesString.count
+        let sumStringCount = (balancesStringCount + incomesStringCount + expensesStringCount)
+        let stringCount = (sumStringCount / 3)
+        return stringCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
