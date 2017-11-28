@@ -165,12 +165,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let incomesStringCount = incomesString.count
-        if incomesStringCount != 0 {
-            return incomesStringCount
-        } else {
-            return 0
-        }
+        return incomesString.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
