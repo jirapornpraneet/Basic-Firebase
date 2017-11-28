@@ -75,6 +75,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 .child("date")
                 .child(dateString!)
 
+            datesString.removeAll()
+            childData.observe(.childAdded, with: { (snapshot) in
+                if let item = snapshot.value as? String {
+                    self.datesString.append(item)
+                    self.tableview.reloadData()
+                }
+            })
+
             incomesString.removeAll()
             handle = childData.child("incomes")
                 .observe(.childAdded, with: { (snapshot) in
@@ -84,28 +92,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     }
                 })
 
-                balancesString.removeAll()
-                childData.child("balances")
-                .observe(.childAdded, with: { (snapshot) in
-                    if let item = snapshot.value as? String {
-                        self.balancesString.append(item)
-                        self.tableview.reloadData()
-                    }
-                })
-
-            datesString.removeAll()
-            childData.observe(.childAdded, with: { (snapshot) in
-                    if let item = snapshot.value as? String {
-                        self.datesString.append(item)
-                        self.tableview.reloadData()
-                    }
-                })
-
             expensesString.removeAll()
             childData.child("expenses")
                 .observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
                         self.expensesString.append(item)
+                        self.tableview.reloadData()
+                    }
+                })
+
+                balancesString.removeAll()
+                childData.child("balances")
+                .observe(.childAdded, with: { (snapshot) in
+                    if let item = snapshot.value as? String {
+                        self.balancesString.append(item)
                         self.tableview.reloadData()
                     }
                 })
