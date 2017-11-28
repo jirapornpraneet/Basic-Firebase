@@ -56,7 +56,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dateString = date
         datePicker.minuteInterval = 60
         getDataToStringArray()
-
+        tableview.reloadData()
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -135,7 +135,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 childData.observe(.childAdded, with: { (snapshot) in
                     if let item = snapshot.value as? String {
                         self.datesString.append(item)
-                        self.tableview.reloadData()
                     }
                 })
 
