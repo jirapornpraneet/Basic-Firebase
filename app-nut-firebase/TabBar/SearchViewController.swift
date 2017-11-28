@@ -56,6 +56,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dateString = date
         datePicker.minuteInterval = 60
         getDataToStringArray()
+
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -82,6 +83,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     self.datesString.append(item)
                     self.tableview.reloadData()
                 }
+                self.tableview.reloadData()
             })
 
             incomesString.removeAll()
@@ -91,6 +93,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.incomesString.append(item)
                         self.tableview.reloadData()
                     }
+                    self.tableview.reloadData()
                 })
 
             expensesString.removeAll()
@@ -100,6 +103,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.expensesString.append(item)
                         self.tableview.reloadData()
                     }
+                    self.tableview.reloadData()
                 })
 
             balancesString.removeAll()
@@ -109,6 +113,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.balancesString.append(item)
                         self.tableview.reloadData()
                     }
+                    self.tableview.reloadData()
                 })
         }
     }
