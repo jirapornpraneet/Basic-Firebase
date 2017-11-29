@@ -30,6 +30,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var datesString: [String] = []
     var incomesString: [String] = []
     var expensesString: [String] = []
+    var incomes: Int?
+    var expenses: Int?
+    var balances: Int?
+    var balanceString: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,40 +123,52 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     @IBAction func saveButtonClicked(_ sender: Any) {
-        if incomesTextField.text != "" && expensesTextField.text != "" {
-            let incomes = Int(incomesTextField.text!)
-            let expenses = Int(expensesTextField.text!)
-            let balance = Int(incomes! - expenses!)
-            let balanceString = String(balance)
-            if  let uid = Auth.auth().currentUser?.uid {
-                let childData = databaseReference
-                    .child("users")
-                    .child(uid)
-                    .child("accounts")
-                    .child("date")
-                    .child(dateString!)
-
-                childData.observe(.childAdded, with: { (snapshot) in
-                    if let item = snapshot.value as? String {
-                        self.datesString.append(item)
-                    }
-                })
-
-                childData.child("incomes")
-                    .childByAutoId()
-                    .setValue(incomesTextField.text!)
-
-                childData.child("expenses")
-                    .childByAutoId()
-                    .setValue(expensesTextField.text!)
-
-                childData.child("balances")
-                    .childByAutoId()
-                    .setValue(balanceString)
-            }
-            incomesTextField.text = ""
-            expensesTextField.text = ""
+        if incomesTextField.text == "" {
+            incomes = 0
+            expenses = Int(expensesTextField.text!)
+            saveDataToFireBase()
+        } else if expensesTextField.text == "" {
+            incomes = Int(incomesTextField.text!)
+            expenses = 0
+            saveDataToFireBase()
+        } else {
+            incomes = Int(incomesTextField.text!)
+            expenses = Int(expensesTextField.text!)
+            saveDataToFireBase()
         }
+    }
+
+    func saveDataToFireBase() {
+        balances = Int(incomes! - expenses!)
+        balanceString = String(balances!)
+        if  let uid = Auth.auth().currentUser?.uid {
+            let childData = databaseReference
+                .child("users")
+                .child(uid)
+                .child("accounts")
+                .child("date")
+                .child(dateString!)
+
+            childData.observe(.childAdded, with: { (snapshot) in
+                if let item = snapshot.value as? String {
+                    self.datesString.append(item)
+                }
+            })
+
+            childData.child("incomes")
+                .childByAutoId()
+                .setValue(String(incomes!))
+
+            childData.child("expenses")
+                .childByAutoId()
+                .setValue(String(expenses!))
+
+            childData.child("balances")
+                .childByAutoId()
+                .setValue(balanceString)
+        }
+        incomesTextField.text = ""
+        expensesTextField.text = ""
     }
 
     override func viewWillAppear(_ animated: Bool) {
