@@ -790,13 +790,82 @@ layer.masksToBounds</string>
                     <view key="view" contentMode="scaleToFill" id="BCA-8C-hAI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xYy-u1-Hhh">
+                                <rect key="frame" x="57" y="73" width="206" height="234"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="d18-pZ-Ohk"/>
+                                    <constraint firstAttribute="height" constant="234" id="fKO-pi-06s"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFz-ym-TBb">
+                                <rect key="frame" x="100" y="351" width="120" height="36"/>
+                                <color key="backgroundColor" red="0.96256510419999997" green="0.71372549019999998" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="6EV-zY-O64"/>
+                                    <constraint firstAttribute="width" constant="120" id="Ijl-gm-pfd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Take  Photo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" value="YES">
+                                        <string key="keyPath">layer.masksToBounds
+accepted
+Yes, I use that a lot but question like this was already answered many times.
+
+But anyway in Interface Builder. You need to add User Defined Runtime Attributes like this:
+
+layer.masksToBounds</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5T-pw-SWQ">
+                                <rect key="frame" x="100" y="419" width="120" height="36"/>
+                                <color key="backgroundColor" red="0.62305326497626012" green="0.88668377372783846" blue="0.96256510419999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Ot9-hy-fFx"/>
+                                    <constraint firstAttribute="width" constant="120" id="plS-89-SJ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Save  Photo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" value="YES">
+                                        <string key="keyPath">layer.masksToBounds
+accepted
+Yes, I use that a lot but question like this was already answered many times.
+
+But anyway in Interface Builder. You need to add User Defined Runtime Attributes like this:
+
+layer.masksToBounds</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.98627373169999999" green="1" blue="0.63567183039999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="gFz-ym-TBb" firstAttribute="centerX" secondItem="BCA-8C-hAI" secondAttribute="centerX" id="U05-e7-M3G"/>
+                            <constraint firstItem="gFz-ym-TBb" firstAttribute="top" secondItem="xYy-u1-Hhh" secondAttribute="bottom" constant="44" id="Vad-eQ-p3L"/>
+                            <constraint firstItem="d5T-pw-SWQ" firstAttribute="centerX" secondItem="BCA-8C-hAI" secondAttribute="centerX" id="eBu-3m-4Ze"/>
+                            <constraint firstItem="xYy-u1-Hhh" firstAttribute="top" secondItem="IgF-Ih-JOC" secondAttribute="top" constant="9" id="ost-3F-o7k"/>
+                            <constraint firstItem="d5T-pw-SWQ" firstAttribute="top" secondItem="gFz-ym-TBb" secondAttribute="bottom" constant="32" id="our-15-pRb"/>
+                            <constraint firstItem="xYy-u1-Hhh" firstAttribute="centerX" secondItem="BCA-8C-hAI" secondAttribute="centerX" id="qcB-yW-OfV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IgF-Ih-JOC"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5K-ph-muB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3022" y="42"/>
+            <point key="canvasLocation" x="3020.625" y="41.197183098591552"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="3Tj-vg-G8q">
