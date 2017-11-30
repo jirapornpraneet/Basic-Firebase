@@ -862,6 +862,9 @@ layer.masksToBounds</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IgF-Ih-JOC"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="xYy-u1-Hhh" id="Hn0-UF-rUl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5K-ph-muB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
