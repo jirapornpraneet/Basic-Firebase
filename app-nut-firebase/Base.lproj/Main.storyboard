@@ -823,6 +823,9 @@ layer.masksToBounds</string>
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePhoto:" destination="13t-eg-t5s" eventType="touchUpInside" id="3pK-RG-zrw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5T-pw-SWQ">
                                 <rect key="frame" x="100" y="419" width="120" height="36"/>
