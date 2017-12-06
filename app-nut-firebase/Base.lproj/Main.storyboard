@@ -852,6 +852,9 @@ layer.masksToBounds</string>
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="savePhoto:" destination="13t-eg-t5s" eventType="touchUpInside" id="KsQ-S3-n0M"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98627373169999999" green="1" blue="0.63567183039999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
