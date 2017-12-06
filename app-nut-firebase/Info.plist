@@ -42,10 +42,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>YES</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>YES</string>
+	<string>Photos is used to share and save photos.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>YES</string>
+	<string>Your camera is used to take photos and videos.</string>
 </dict>
 </plist>
