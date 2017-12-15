@@ -64,19 +64,14 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         tabController.setViewController(myAccountViewController, atIndex: 4)
 
         tabController?.setAction(atIndex: 4) {
-            print("Index 4")
         }
         tabController?.setAction(atIndex: 3) {
-            print("Index 3")
         }
         tabController?.setAction(atIndex: 2) {
-            print("Index 2")
         }
         tabController?.setAction(atIndex: 1) {
-            print("Index 1")
         }
         tabController?.setAction(atIndex: 0) {
-            print("Index 0")
         }
     }
 
@@ -117,19 +112,15 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
     }
 
     func tabBar(_ tabBar: AZTabBarController, didMoveToTabAtIndex index: Int) {
-        print("didMoveToTabAtIndex \(index)")
     }
 
     func tabBar(_ tabBar: AZTabBarController, didSelectTabAtIndex index: Int) {
-        print("didSelectTabAtIndex \(index)")
     }
 
     func tabBar(_ tabBar: AZTabBarController, willMoveToTabAtIndex index: Int) {
-        print("willMoveToTabAtIndex \(index)")
     }
 
     func tabBar(_ tabBar: AZTabBarController, didLongClickTabAtIndex index: Int) {
-        print("didLongClickTabAtIndex \(index)")
     }
 
     override func viewWillAppear(_ animated: Bool) {
