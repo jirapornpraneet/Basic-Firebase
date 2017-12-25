@@ -139,27 +139,22 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
         profileImageView.clipsToBounds = true
         if let uid = Auth.auth().currentUser?.uid {
-            databaseReference
-                .child("users")
-                .child(uid)
-                .observeSingleEvent(of:
-                    .value, with: { (snapshot) in
-                        if let dict = snapshot.value as? [String: AnyObject] {
-                            if let profileImageURL = dict["pic"] as? String {
-                                let url = URL(string: profileImageURL)
-                                URLSession.shared.dataTask(with: url!,
-                                                           completionHandler: { (data, _, error) in
-                                                            if error != nil {
-                                                                print(error!)
-                                                                return
-                                                            }
-                                                            DispatchQueue.main.async {
-                                                                self.profileImageView.image = UIImage(data: data!)
-                                                            }
-                                }).resume()
+            databaseReference.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dict = snapshot.value as? [String: AnyObject] {
+                    if let profileImageURL = dict["pic"] as? String {
+                        let url = URL(string: profileImageURL)
+                        URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
+                            if error != nil {
+                                print(error!)
+                                return
                             }
-                        }
-                })
+                        DispatchQueue.main.async {
+                            self.profileImageView.image = UIImage(data: data!)
+                            }
+                        }).resume()
+                    }
+                }
+            })
         }
     }
 
@@ -193,55 +188,47 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         let storedImage = storageReference.child("profileUserImages").child(imageName)
 
         if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {
-            storedImage
-                .putData(uploadData,
-                         metadata: nil,
-                         completion: { (_, error) in
+            storedImage.putData(uploadData, metadata: nil, completion: { (_, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+
+            storedImage.downloadURL(completion: { (url, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+
+                if let urlText = url?.absoluteString {
+                    self.databaseReference
+                        .child("users")
+                        .child((Auth.auth().currentUser?.uid)!)
+                        .updateChildValues(["pic": urlText], withCompletionBlock: { (error, _) in
                             if error != nil {
                                 print(error!)
                                 return
                             }
-                            storedImage.downloadURL(completion: { (url, error) in
-                                if error != nil {
-                                    print(error!)
-                                    return
-                                }
-                                if let urlText = url?.absoluteString {
-                                    self.databaseReference
-                                        .child("users")
-                                        .child((Auth.auth().currentUser?.uid)!)
-                                        .updateChildValues(["pic": urlText],
-                                                           withCompletionBlock: { (error, _) in
-                                                            if error != nil {
-                                                                print(error!)
-                                                                return
-                                                            }
-                                        })
-                                }
-                            })
-                })
+                        })
+                }
+            })
+            })
         }
     }
 
     @IBAction func singUpClicked(_ sender: Any) {
-        Auth.auth()
-            .createUser(withEmail: emailTextField.text!,
-                        password: passwordTextField.text!) { (_, error) in
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (_, error) in
             if error == nil {
-                let alertController =
-                    UIAlertController(title: "ลงทะเบียนผู้ใช้งาน",
-                                      message: "ลงทะเบียนผู้ใช้งานเรียบร้อย",
-                                      preferredStyle: .alert)
-                alertController
-                    .addAction(UIAlertAction(title: "ตกลง",
-                                             style: UIAlertActionStyle.default,
-                                             handler: { (_) in
-                                                self.addDatabaseReference()
-                                                self.saveProfileImageView()
-                                                let vc = self.storyboard?
-                                                    .instantiateViewController(withIdentifier: "Login")
-                                                self.show(vc!, sender: sender)
-                    }))
+                let alertController = UIAlertController(title: "ลงทะเบียนผู้ใช้งาน", message: "ลงทะเบียนผู้ใช้งานเรียบร้อย",
+                                                        preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "ตกลง",
+                                                        style: UIAlertActionStyle.default, handler: { (_) in
+                                                            self.addDatabaseReference()
+                                                            self.saveProfileImageView()
+                                                            let vc = self.storyboard?
+                                                                .instantiateViewController(withIdentifier: "Login")
+                                                            self.show(vc!, sender: sender)
+                }))
                 self.present(alertController, animated: true, completion: nil)
             } else {
                 let alertController = UIAlertController(title: "ข้อผิดพลาด",
@@ -252,7 +239,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
                                                   handler: nil)
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
-                                }
+            }
         }
     }
 }

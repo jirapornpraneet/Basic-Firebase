@@ -41,20 +41,15 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
     }
 
     func addActionsTabBarToViewController() {
-        let myHomeViewController = UIStoryboard(name: "Main",
-                                                bundle: nil)
+        let myHomeViewController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "HomeViewController")
-        let mySearchViewController = UIStoryboard(name: "Main",
-                                                  bundle: nil)
+        let mySearchViewController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "SearchViewController")
-        let myCameraViewController = UIStoryboard(name: "Main",
-                                                  bundle: nil)
+        let myCameraViewController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "CameraViewController")
-        let myFeedViewController  = UIStoryboard(name: "Main",
-                                                  bundle: nil)
+        let myFeedViewController  = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "FeedViewController")
-        let myAccountViewController = UIStoryboard(name: "Main",
-                                                   bundle: nil)
+        let myAccountViewController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "AccountViewController")
 
         tabController.setViewController(myHomeViewController, atIndex: 0)

@@ -91,34 +91,31 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             })
 
             incomesString.removeAll()
-            handle = childData.child("incomes")
-                .observe(.childAdded, with: { (snapshot) in
-                    if let item = snapshot.value as? String {
-                        self.incomesString.append(item)
-                        self.tableview.reloadData()
-                    }
+            handle = childData.child("incomes").observe(.childAdded, with: { (snapshot) in
+                if let item = snapshot.value as? String {
+                    self.incomesString.append(item)
                     self.tableview.reloadData()
-                })
+                }
+                self.tableview.reloadData()
+            })
 
             expensesString.removeAll()
-            childData.child("expenses")
-                .observe(.childAdded, with: { (snapshot) in
-                    if let item = snapshot.value as? String {
-                        self.expensesString.append(item)
-                        self.tableview.reloadData()
-                    }
+            childData.child("expenses").observe(.childAdded, with: { (snapshot) in
+                if let item = snapshot.value as? String {
+                    self.expensesString.append(item)
                     self.tableview.reloadData()
-                })
+                }
+                self.tableview.reloadData()
+            })
 
             balancesString.removeAll()
-            childData.child("balances")
-                .observe(.childAdded, with: { (snapshot) in
-                    if let item = snapshot.value as? String {
-                        self.balancesString.append(item)
-                        self.tableview.reloadData()
-                    }
+            childData.child("balances").observe(.childAdded, with: { (snapshot) in
+                if let item = snapshot.value as? String {
+                    self.balancesString.append(item)
                     self.tableview.reloadData()
-                })
+                }
+                self.tableview.reloadData()
+            })
         }
     }
 

@@ -29,50 +29,43 @@ class AccountViewController: UIViewController {
         profileImageView.clipsToBounds = true
         let databaseReference = Database.database().reference()
         if  let uid = Auth.auth().currentUser?.uid {
-            databaseReference
-                .child("users")
-                .child(uid)
-                .observeSingleEvent(of:
-                    .value, with: { (snapshot) in
-                        if let dict = snapshot.value as? [String: AnyObject] {
-                            if let profileImageURL = dict["pic"] as? String {
-                                let url = URL(string: profileImageURL)
-                                URLSession.shared.dataTask(with: url!,
-                                                           completionHandler: { (data, _, error) in
-                                                            if error != nil {
-                                                                print(error!)
-                                                                return
-                                                            }
-                                                            DispatchQueue.main.async {
-                                                                self.profileImageView.image = UIImage(data: data!)
-                                                            }
-                                }).resume()
-                            }
-                        }
-                })
+            databaseReference.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dict = snapshot.value as? [String: AnyObject] {
+                    if let profileImageURL = dict["pic"] as? String {
+                        let url = URL(string: profileImageURL)
+                        URLSession.shared.dataTask(with: url!,
+                                                   completionHandler: { (data, _, error) in
+                                                    if error != nil {
+                                                        print(error!)
+                                                        return
+                                                    }
+                                                    DispatchQueue.main.async {
+                                                        self.profileImageView.image = UIImage(data: data!)
+                                                    }
+                        }).resume()
+                    }
+                }
+            })
         }
     }
 
     func setShowData() {
         let databaseReference = Database.database().reference()
         if  let uid = Auth.auth().currentUser?.uid {
-            databaseReference
-                .child("users")
-                .child(uid)
-                .observeSingleEvent(of: .value, with: { (snapshot) in
-                    if let dict = snapshot.value as? [String: AnyObject] {
-                        let firstnameString = dict["firstname"] as? String
-                        let lastnameString = dict["lastname"] as? String
-                        let genderString = dict["gender"] as? String
-                        let emailString = dict["email"] as? String
-                        self.firstnameLabel.text = firstnameString
-                        self.lastnameLabel.text = lastnameString
-                        self.genderLabel.text = genderString
-                        self.emailLabel.text = emailString
-                    }
-                }, withCancel: { (error) in
-                    print("Error", error)
-                })
+            databaseReference.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dict = snapshot.value as? [String: AnyObject] {
+                    let firstnameString = dict["firstname"] as? String
+                    let lastnameString = dict["lastname"] as? String
+                    let genderString = dict["gender"] as? String
+                    let emailString = dict["email"] as? String
+                    self.firstnameLabel.text = firstnameString
+                    self.lastnameLabel.text = lastnameString
+                    self.genderLabel.text = genderString
+                    self.emailLabel.text = emailString
+                }
+            }, withCancel: { (error) in
+                print("Error", error)
+            })
         }
     }
 
