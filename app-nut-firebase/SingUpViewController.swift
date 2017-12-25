@@ -219,22 +219,22 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBAction func singUpClicked(_ sender: Any) {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (_, error) in
             if error == nil {
-                let alertController = UIAlertController(title: "Register", message: "Success",
+                let alertController = UIAlertController(title: R.string.localizable.register(),
+                                                        message: R.string.localizable.success(),
                                                         preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK",
+                alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
                                                         style: UIAlertActionStyle.default, handler: { (_) in
                                                             self.addDatabaseReference()
                                                             self.saveProfileImageView()
-                                                            let vc = self.storyboard?
-                                                                .instantiateViewController(withIdentifier: "Login")
+                                                            let vc = R.storyboard.main.login()
                                                             self.show(vc!, sender: sender)
                 }))
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "Something wrong!",
+                let alertController = UIAlertController(title: R.string.localizable.somethingWrong(),
                                                         message: error?.localizedDescription,
                                                         preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK",
+                let defaultAction = UIAlertAction(title: R.string.localizable.oK(),
                                                   style: .cancel,
                                                   handler: nil)
                 alertController.addAction(defaultAction)

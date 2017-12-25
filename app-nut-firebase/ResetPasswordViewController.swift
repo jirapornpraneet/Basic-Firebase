@@ -37,15 +37,15 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
             var title = ""
             var message = ""
             if error != nil {
-                title = "Error"
+                title = R.string.localizable.error()
                 message = (error?.localizedDescription)!
             } else {
-                title = "Success"
-                message = "Password reset email sent"
+                title = R.string.localizable.success()
+                message = R.string.localizable.passwordResetEmailSent()
                 self.emailTextField.text = ""
             }
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            let defaultAction = UIAlertAction(title: R.string.localizable.oK(), style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
         }

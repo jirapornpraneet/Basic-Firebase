@@ -58,7 +58,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func showPasswordClicked(_ sender: Any) {
-        let origImage = UIImage(named: "icon_eye_red")
+        let origImage = R.image.icon_eye_red()
         let tintedImage = origImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         showPasswordButton.setImage(tintedImage, for: .normal)
 
@@ -79,22 +79,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         Auth.auth().signIn(withEmail: emailTextField.text!,
                            password: passwordTextField.text!) { (_, error) in
             if error == nil {
-                let alertController = UIAlertController(title: "​Log in",
-                                                        message: "Success",
+                let alertController = UIAlertController(title: R.string.localizable.logIn(),
+                                                        message: R.string.localizable.success(),
                                                         preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK",
+                alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
                                                         style: UIAlertActionStyle.default,
                                                         handler: { (_) in
-                                                            let vc = self.storyboard?
-                                                                .instantiateViewController(withIdentifier: "TabBar")
+                                                            let vc = R.storyboard.main.tabBar()
                                                              self.show(vc!, sender: sender)
                 }))
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "Something wrong!",
+                let alertController = UIAlertController(title: R.string.localizable.somethingWrong(),
                                                         message: error?.localizedDescription,
                                                         preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK",
+                alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
                                                         style: .cancel,
                                                         handler: nil))
                 self.present(alertController, animated: true, completion: nil)

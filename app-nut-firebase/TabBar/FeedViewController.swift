@@ -23,7 +23,7 @@ class FeedViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.topItem?.title = "Feed"
+        self.navigationController?.navigationBar.topItem?.title = R.string.localizable.feed()
     }
 
 }

@@ -71,7 +71,7 @@ class AccountViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.topItem?.title = "Account"
+        self.navigationController?.navigationBar.topItem?.title = R.string.localizable.account()
     }
 
 }

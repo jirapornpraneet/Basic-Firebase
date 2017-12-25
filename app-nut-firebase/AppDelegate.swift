@@ -19,13 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         if Auth.auth().currentUser == nil {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginViewController = storyboard.instantiateViewController(withIdentifier: "MainLoginNavigation")
-            self.window?.rootViewController = loginViewController
+            self.window?.rootViewController = R.storyboard.main.mainLoginNavigation()
         } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let tabBarViewController = storyboard.instantiateViewController(withIdentifier: "MainTabBarNavigation")
-            self.window?.rootViewController = tabBarViewController
+            self.window?.rootViewController = R.storyboard.main.mainTabBarNavigation()
         }
         return true
     }

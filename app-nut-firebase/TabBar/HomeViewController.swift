@@ -25,6 +25,6 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.topItem?.title = "Home"
+        self.navigationController?.navigationBar.topItem?.title = R.string.localizable.home()
     }
 }

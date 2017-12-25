@@ -45,8 +45,10 @@ UINavigationControllerDelegate {
         let imageData = UIImagePNGRepresentation(imageView.image!)
         let compresedImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compresedImage!, nil, nil, nil)
-        let alert = UIAlertController(title: "Saved", message: "Your image has been saved", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alert = UIAlertController(title: R.string.localizable.saved(),
+                                      message: R.string.localizable.yourImageHasBeenSaved(),
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: R.string.localizable.oK(), style: .default, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
         imageView.image = UIImage(named: "")
@@ -58,7 +60,7 @@ UINavigationControllerDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.topItem?.title = "Camera"
+        self.navigationController?.navigationBar.topItem?.title = R.string.localizable.camera()
     }
 
 }

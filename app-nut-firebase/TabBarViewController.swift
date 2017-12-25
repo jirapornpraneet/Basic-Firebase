@@ -41,22 +41,17 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
     }
 
     func addActionsTabBarToViewController() {
-        let myHomeViewController = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "HomeViewController")
-        let mySearchViewController = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "SearchViewController")
-        let myCameraViewController = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "CameraViewController")
-        let myFeedViewController  = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "FeedViewController")
-        let myAccountViewController = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "AccountViewController")
+        let myHomeViewController = R.storyboard.main.homeViewController()
+        let mySearchViewController = R.storyboard.main.searchViewController()
+        let myCameraViewController = R.storyboard.main.cameraViewController()
+        let myFeedViewController = R.storyboard.main.feedViewController()
+        let myAccountViewController = R.storyboard.main.accountViewController()
 
-        tabController.setViewController(myHomeViewController, atIndex: 0)
-        tabController.setViewController(mySearchViewController, atIndex: 1)
-        tabController.setViewController(myCameraViewController, atIndex: 2)
-        tabController.setViewController(myFeedViewController, atIndex: 3)
-        tabController.setViewController(myAccountViewController, atIndex: 4)
+        tabController.setViewController(myHomeViewController!, atIndex: 0)
+        tabController.setViewController(mySearchViewController!, atIndex: 1)
+        tabController.setViewController(myCameraViewController!, atIndex: 2)
+        tabController.setViewController(myFeedViewController!, atIndex: 3)
+        tabController.setViewController(myAccountViewController!, atIndex: 4)
 
         tabController?.setAction(atIndex: 4) {
         }
@@ -82,11 +77,11 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         tabController.separatorLineVisible = false
         tabController.animateTabChange = true
 
-        tabController.setTitle("Home", atIndex: 0)
-        tabController.setTitle("Search", atIndex: 1)
-        tabController.setTitle("Camera", atIndex: 2)
-        tabController.setTitle("Feed", atIndex: 3)
-        tabController.setTitle("Profile", atIndex: 4)
+        tabController.setTitle(R.string.localizable.home(), atIndex: 0)
+        tabController.setTitle(R.string.localizable.search(), atIndex: 1)
+        tabController.setTitle(R.string.localizable.camera(), atIndex: 2)
+        tabController.setTitle(R.string.localizable.feed(), atIndex: 3)
+        tabController.setTitle(R.string.localizable.profile(), atIndex: 4)
         tabController.onlyShowTextForSelectedButtons = true
     }
 
@@ -126,14 +121,13 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
-                let alertController = UIAlertController(title: "Log out",
-                                                        message: "Do you want to log out?",
+                let alertController = UIAlertController(title: R.string.localizable.logOut(),
+                                                        message: R.string.localizable.doYouWantToLogOut(),
                                                         preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK",
+                alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
                                                         style: UIAlertActionStyle.default,
                                                         handler: { (_) in
-                                                            let vc = self.storyboard?
-                                                                .instantiateViewController(withIdentifier: "Login")
+                                                            let vc = R.storyboard.main.login()
                                                             self.show(vc!, sender: sender)
                 }))
                 self.present(alertController, animated: true, completion: nil)

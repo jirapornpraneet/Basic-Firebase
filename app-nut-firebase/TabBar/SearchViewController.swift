@@ -170,7 +170,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.topItem?.title = "Search"
+        self.navigationController?.navigationBar.topItem?.title = R.string.localizable.search()
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -182,11 +182,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? AccountTableViewCell
-            cell?.incomesLabel.text = incomesString[indexPath.row]
-            cell?.expensesLabel.text = expensesString[indexPath.row]
-            cell?.balanceLabel.text = balancesString[indexPath.row]
-        return cell!
+       let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.cell, for: indexPath as IndexPath)!
+        cell.incomesLabel.text = incomesString[indexPath.row]
+        cell.expensesLabel.text = expensesString[indexPath.row]
+        cell.balanceLabel.text = balancesString[indexPath.row]
+        return cell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
