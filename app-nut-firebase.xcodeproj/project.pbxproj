@@ -17,6 +17,7 @@
 		AB062D7B1FB18B9400C103E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB062D7A1FB18B9400C103E6 /* GoogleService-Info.plist */; };
 		AB062D7E1FB195DA00C103E6 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062D7D1FB195DA00C103E6 /* SingUpViewController.swift */; };
 		AB15A3EB1FF0E70E009E599C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB15A3ED1FF0E70E009E599C /* Localizable.strings */; };
+		AB15A3F21FF0FA0D009E599C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15A3F11FF0FA0D009E599C /* R.generated.swift */; };
 		AB554C081FBBE70200776985 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB554C071FBBE70200776985 /* CardView.swift */; };
 		AB9ABE151FB1BB5600DB3204 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9ABE141FB1BB5600DB3204 /* ResetPasswordViewController.swift */; };
 		ABAE073C1FBAA1F40039C31B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE07371FBAA1F40039C31B /* SearchViewController.swift */; };
@@ -44,6 +45,7 @@
 		AB15A3E81FF0E0E4009E599C /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AB15A3EE1FF0E71A009E599C /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB15A3EF1FF0E81D009E599C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB15A3F11FF0FA0D009E599C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		AB554C071FBBE70200776985 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AB9ABE141FB1BB5600DB3204 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		ABAE07371FBAA1F40039C31B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		AB062D591FB172D200C103E6 = {
 			isa = PBXGroup;
 			children = (
+				AB15A3F11FF0FA0D009E599C /* R.generated.swift */,
 				AB062D641FB172D200C103E6 /* app-nut-firebase */,
 				AB062D631FB172D200C103E6 /* Products */,
 				81ECFA9B50F71D2B6D672F57 /* Pods */,
@@ -146,6 +149,7 @@
 				B625ADAF9772E690EA25996C /* [CP] Embed Pods Frameworks */,
 				2F1A74EFF5BEC7BDEA872D9F /* [CP] Copy Pods Resources */,
 				AB062D771FB173F800C103E6 /* ShellScript */,
+				AB15A3F01FF0F8C6009E599C /* R.swift */,
 			);
 			buildRules = (
 			);
@@ -253,6 +257,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
+		AB15A3F01FF0F8C6009E599C /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 		B625ADAF9772E690EA25996C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +282,7 @@
 				"${BUILT_PRODUCTS_DIR}/EasyNotificationBadge/EasyNotificationBadge.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -273,6 +292,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyNotificationBadge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -299,6 +319,7 @@
 				AB062D661FB172D200C103E6 /* AppDelegate.swift in Sources */,
 				AB554C081FBBE70200776985 /* CardView.swift in Sources */,
 				ABAE073D1FBAA1F40039C31B /* HomeViewController.swift in Sources */,
+				AB15A3F21FF0FA0D009E599C /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
