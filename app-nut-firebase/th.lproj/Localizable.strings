@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  app-nut-firebase
+
+  Created by Jiraporn Praneet on 25/12/2560 BE.
+  Copyright © 2560 Jiraporn Praneet. All rights reserved.
+*/
+
+"Sorry" = "ขออภัย";
+"Register" = "ลงทะเบียน";
+"Success" = "สำเร็จ";
+"Something wrong!" = "เกิดข้อผิดพลาด";
+"OK" = "ตกลง";
+"Log in" = "เข้าสู่ระบบ";
+"Error" = "ผิดพลาด";
+"Password reset email sent" = "ส่งอีเมล์เพื่อรีเซ็ครหัสผ่าน";
+"Do you want to log out?" = "คุณต้องการที่จะออกจากระบบ?";
+"Log out" = "ออกจากระบบ";
+"Home" = "หน้าหลัก";
+"Search" = "ค้นหา";
+"Camera" = "กล้อง";
+"Feed" = "ข่าว";
+"Profile" = "ข้อมูลส่วนตัว";
+"Saved" = "บันทึก";
+"Your image has been saved" = "ภาพของคุณได้รับการบันทึก";
+"Account" = "ข้อมูลส่วนตัว";

@@ -1,0 +1,129 @@
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "0S4-b2-tca"; */
+"0S4-b2-tca.text" = "รหัสผ่าน";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "3eg-U8-OhU"; */
+"3eg-U8-OhU.text" = "ชื่อ";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "4E1-aq-jcV"; */
+"4E1-aq-jcV.text" = "นามสกุล";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "4Pc-2g-Bgm"; */
+"4Pc-2g-Bgm.placeholder" = "อีเมล์";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "674-Zc-24O"; */
+"674-Zc-24O.text" = "อีเมล์";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "6uY-Vn-N34"; */
+"6uY-Vn-N34.text" = "เข้าสู่ระบบ";
+
+/* Class = "UIButton"; normalTitle = "forget password?"; ObjectID = "7AA-A4-utZ"; */
+"7AA-A4-utZ.normalTitle" = "ลืมรหัสผ่าน?";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "AeM-DL-f5H"; */
+"AeM-DL-f5H.text" = "นามสกุล";
+
+/* Class = "UILabel"; text = "Reset Password"; ObjectID = "CH8-KU-B8E"; */
+"CH8-KU-B8E.text" = "เปลี่ยนรหัสผ่าน";
+
+/* Class = "UITextField"; placeholder = "Enter last name"; ObjectID = "Cir-rR-yTJ"; */
+"Cir-rR-yTJ.placeholder" = "นามสกุล";
+
+/* Class = "UITextField"; placeholder = "Enter password"; ObjectID = "CyH-NW-Fvm"; */
+"CyH-NW-Fvm.placeholder" = "รหัสผ่าน";
+
+/* Class = "UILabel"; text = "Balance"; ObjectID = "DUQ-Gy-cL3"; */
+"DUQ-Gy-cL3.text" = "ยอดคงเหลือ";
+
+/* Class = "UILabel"; text = "gender"; ObjectID = "Fas-Xs-3TZ"; */
+"Fas-Xs-3TZ.text" = "เพศ";
+
+/* Class = "UIBarButtonItem"; title = "Log Out"; ObjectID = "Jyg-JF-vjo"; */
+"Jyg-JF-vjo.title" = "ออกสู่ระบบ";
+
+/* Class = "UITextField"; placeholder = "Enter first name"; ObjectID = "Lmo-BB-6mz"; */
+"Lmo-BB-6mz.placeholder" = "ชื่อ";
+
+/* Class = "UILabel"; text = "Incomes"; ObjectID = "Pwp-Fj-g36"; */
+"Pwp-Fj-g36.text" = "รายรับ";
+
+/* Class = "UILabel"; text = "00000000"; ObjectID = "SX2-dp-fpX"; */
+"SX2-dp-fpX.text" = "00000000";
+
+/* Class = "UIButton"; normalTitle = "Sing Up"; ObjectID = "Tpf-eV-guV"; */
+"Tpf-eV-guV.normalTitle" = "ลงทะเบียน";
+
+/* Class = "UIButton"; normalTitle = "save"; ObjectID = "UKx-V7-v6Z"; */
+"UKx-V7-v6Z.normalTitle" = "บันทึก";
+
+/* Class = "UIButton"; normalTitle = "Sing Up"; ObjectID = "Wee-uk-yoU"; */
+"Wee-uk-yoU.normalTitle" = "ลงทะเบียน";
+
+/* Class = "UIButton"; normalTitle = "upload image profile"; ObjectID = "X8e-le-uDO"; */
+"X8e-le-uDO.normalTitle" = "อัพโหลดรูปภาพประจำตัว";
+
+/* Class = "UILabel"; text = "DD/MM/YYYY"; ObjectID = "XUV-1T-jmb"; */
+"XUV-1T-jmb.text" = "DD/MM/YYYY";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "YGP-eF-Nbi"; */
+"YGP-eF-Nbi.text" = "ชื่อ";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "YT9-vX-LYY"; */
+"YT9-vX-LYY.text" = "เพศ";
+
+/* Class = "UITextField"; placeholder = "Enter confirm password"; ObjectID = "YYF-kk-7j8"; */
+"YYF-kk-7j8.placeholder" = "ยืนยันรหัสผ่าน";
+
+/* Class = "UIButton"; normalTitle = "Save  Photo"; ObjectID = "d5T-pw-SWQ"; */
+"d5T-pw-SWQ.normalTitle" = "บันทึกรูปภาพ";
+
+/* Class = "UILabel"; text = "Expenses"; ObjectID = "dkL-Xs-7xD"; */
+"dkL-Xs-7xD.text" = "รายจ่าย";
+
+/* Class = "UIButton"; normalTitle = "Take  Photo"; ObjectID = "gFz-ym-TBb"; */
+"gFz-ym-TBb.normalTitle" = "ถ่ายรูป";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "gbT-bD-Wci"; */
+"gbT-bD-Wci.title" = "เพิ่ม";
+
+/* Class = "UIButton"; normalTitle = "Reset Password"; ObjectID = "izy-cj-2nA"; */
+"izy-cj-2nA.normalTitle" = "เปลี่ยนรหัสผ่าน";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "jXl-YP-cRN"; */
+"jXl-YP-cRN.text" = "อีเมล์";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "lQ9-Ql-FlN"; */
+"lQ9-Ql-FlN.text" = "ยืนยันรหัสผ่าน";
+
+/* Class = "UINavigationItem"; title = "Login"; ObjectID = "mA4-uc-8kj"; */
+"mA4-uc-8kj.title" = "เข้าสู่ระบบ";
+
+/* Class = "UITextField"; placeholder = "Enter email"; ObjectID = "nZc-Tw-VuX"; */
+"nZc-Tw-VuX.placeholder" = "อีเมล์";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "pQp-bB-mRb"; */
+"pQp-bB-mRb.placeholder" = "รหัสผ่าน";
+
+/* Class = "UILabel"; text = "Expenses"; ObjectID = "uy9-YL-qYD"; */
+"uy9-YL-qYD.text" = "รายจ่าย";
+
+/* Class = "UILabel"; text = "00000000"; ObjectID = "v2W-MZ-b1k"; */
+"v2W-MZ-b1k.text" = "00000000";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "vLg-Re-Hyo"; */
+"vLg-Re-Hyo.normalTitle" = "เข้าสู่ระบบ";
+
+/* Class = "UILabel"; text = "00000000"; ObjectID = "vfH-43-1KK"; */
+"vfH-43-1KK.text" = "00000000";
+
+/* Class = "UILabel"; text = "Incomes"; ObjectID = "x0u-2c-sa8"; */
+"x0u-2c-sa8.text" = "รายรับ";
+
+/* Class = "UISegmentedControl"; x8s-i1-8vg.segmentTitles[0] = "male"; ObjectID = "x8s-i1-8vg"; */
+"x8s-i1-8vg.segmentTitles[0]" = "เพศชาย";
+
+/* Class = "UISegmentedControl"; x8s-i1-8vg.segmentTitles[1] = "female"; ObjectID = "x8s-i1-8vg"; */
+"x8s-i1-8vg.segmentTitles[1]" = "เพศหญิง";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "xxo-Bu-lgv"; */
+"xxo-Bu-lgv.placeholder" = "อีเมล์";

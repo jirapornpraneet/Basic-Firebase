@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  app-nut-firebase
+
+  Created by Jiraporn Praneet on 25/12/2560 BE.
+  Copyright © 2560 Jiraporn Praneet. All rights reserved.
+*/
+"Sorry" = "Sorry";
+"Register" = "Register";
+"Success" = "Success";
+"Something wrong!" = "Something wrong!";
+"OK" = "OK";
+"Log in" = "Log in";
+"Error" = "Error";
+"Password reset email sent" = "Password reset email sent";
+"Do you want to log out?" = "Do you want to log out?";
+"Log out" = "Log out";
+"Home" = "Home";
+"Search" = "Search";
+"Camera" = "Camera";
+"Feed" = "Feed";
+"Profile" = "Profile";
+"Saved" = "Saved";
+"Your image has been saved" = "Your image has been saved";
+"Account" = "Account";
