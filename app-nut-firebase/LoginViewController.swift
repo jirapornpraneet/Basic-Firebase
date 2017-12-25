@@ -79,10 +79,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         Auth.auth().signIn(withEmail: emailTextField.text!,
                            password: passwordTextField.text!) { (_, error) in
             if error == nil {
-                let alertController = UIAlertController(title: "เข้าสู่ระบบ",
-                                                        message: "เข้าสู่ระบบเรียบร้อย",
+                let alertController = UIAlertController(title: "​Log in",
+                                                        message: "Success",
                                                         preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "ตกลง",
+                alertController.addAction(UIAlertAction(title: "OK",
                                                         style: UIAlertActionStyle.default,
                                                         handler: { (_) in
                                                             let vc = self.storyboard?
@@ -91,10 +91,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }))
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "ข้อผิดพลาด",
+                let alertController = UIAlertController(title: "Something wrong!",
                                                         message: error?.localizedDescription,
                                                         preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "ตกลง",
+                alertController.addAction(UIAlertAction(title: "OK",
                                                         style: .cancel,
                                                         handler: nil))
                 self.present(alertController, animated: true, completion: nil)

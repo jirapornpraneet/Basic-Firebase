@@ -126,10 +126,10 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
-                let alertController = UIAlertController(title: "ออกสู่ระบบ",
-                                                        message: "ออกสู่ระบบเรียบร้อย",
+                let alertController = UIAlertController(title: "Log out",
+                                                        message: "Do you want to log out?",
                                                         preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "ตกลง",
+                alertController.addAction(UIAlertAction(title: "OK",
                                                         style: UIAlertActionStyle.default,
                                                         handler: { (_) in
                                                             let vc = self.storyboard?

@@ -37,10 +37,10 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
             var title = ""
             var message = ""
             if error != nil {
-                title = "Error!"
+                title = "Error"
                 message = (error?.localizedDescription)!
             } else {
-                title = "Success!"
+                title = "Success"
                 message = "Password reset email sent"
                 self.emailTextField.text = ""
             }

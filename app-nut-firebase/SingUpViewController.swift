@@ -219,9 +219,9 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBAction func singUpClicked(_ sender: Any) {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (_, error) in
             if error == nil {
-                let alertController = UIAlertController(title: "ลงทะเบียนผู้ใช้งาน", message: "ลงทะเบียนผู้ใช้งานเรียบร้อย",
+                let alertController = UIAlertController(title: "Register", message: "Success",
                                                         preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "ตกลง",
+                alertController.addAction(UIAlertAction(title: "OK",
                                                         style: UIAlertActionStyle.default, handler: { (_) in
                                                             self.addDatabaseReference()
                                                             self.saveProfileImageView()
@@ -231,10 +231,10 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
                 }))
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "ข้อผิดพลาด",
+                let alertController = UIAlertController(title: "Something wrong!",
                                                         message: error?.localizedDescription,
                                                         preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "ตกลง",
+                let defaultAction = UIAlertAction(title: "OK",
                                                   style: .cancel,
                                                   handler: nil)
                 alertController.addAction(defaultAction)
