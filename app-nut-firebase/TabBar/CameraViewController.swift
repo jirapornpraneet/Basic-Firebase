@@ -39,6 +39,9 @@ UINavigationControllerDelegate {
     }
 
     @IBAction func savePhoto(_ sender: AnyObject) {
+        if imageView.image == nil {
+            return
+        }
         let imageData = UIImagePNGRepresentation(imageView.image!)
         let compresedImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compresedImage!, nil, nil, nil)
@@ -46,6 +49,7 @@ UINavigationControllerDelegate {
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
+        imageView.image = UIImage(named: "")
     }
 
     override func didReceiveMemoryWarning() {
