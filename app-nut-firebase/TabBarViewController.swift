@@ -121,15 +121,17 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
-                let alertController = UIAlertController(title: R.string.localizable.logOut(),
+                let alertController = UIAlertController(title: nil,
                                                         message: R.string.localizable.doYouWantToLogOut(),
-                                                        preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
-                                                        style: UIAlertActionStyle.default,
-                                                        handler: { (_) in
-                                                            let vc = R.storyboard.main.login()
-                                                            self.show(vc!, sender: sender)
-                }))
+                                                        preferredStyle: UIAlertControllerStyle.alert)
+                let okAction = UIAlertAction(title: R.string.localizable.oK(),
+                                             style: UIAlertActionStyle.destructive) { _ in
+                                                let vc = R.storyboard.main.login()
+                                                self.show(vc!, sender: sender)
+                }
+                alertController.addAction(okAction)
+                alertController.addAction(UIAlertAction(title: R.string.localizable.cancel(),
+                                                        style: UIAlertActionStyle.default, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
             } catch let error as NSError {
                 print(error.localizedDescription)
