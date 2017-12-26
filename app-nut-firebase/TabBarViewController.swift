@@ -118,24 +118,23 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
     }
 
     @IBAction func logOutClicked(_ sender: Any) {
-        if Auth.auth().currentUser != nil {
-            do {
-                try Auth.auth().signOut()
-                let alertController = UIAlertController(title: nil,
-                                                        message: R.string.localizable.doYouWantToLogOut(),
-                                                        preferredStyle: UIAlertControllerStyle.alert)
-                let okAction = UIAlertAction(title: R.string.localizable.oK(),
-                                             style: UIAlertActionStyle.destructive) { _ in
-                                                let vc = R.storyboard.main.login()
-                                                self.show(vc!, sender: sender)
+        let alert = UIAlertController(title: nil, message: R.string.localizable.doYouWantToLogOut(),
+                                      preferredStyle: UIAlertControllerStyle.alert)
+
+        let okAction = UIAlertAction(title: R.string.localizable.oK(), style: UIAlertActionStyle.destructive) { _ in
+            if Auth.auth().currentUser != nil {
+                do {
+                    try Auth.auth().signOut()
+                    let vc = R.storyboard.main.login()
+                    self.show(vc!, sender: sender)
+                } catch let error as NSError {
+                    print(error.localizedDescription)
                 }
-                alertController.addAction(okAction)
-                alertController.addAction(UIAlertAction(title: R.string.localizable.cancel(),
-                                                        style: UIAlertActionStyle.default, handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-            } catch let error as NSError {
-                print(error.localizedDescription)
             }
         }
+        alert.addAction(okAction)
+        alert.addAction(UIAlertAction(title: R.string.localizable.cancel(),
+                                      style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
