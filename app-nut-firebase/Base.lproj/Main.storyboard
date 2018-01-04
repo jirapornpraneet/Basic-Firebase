@@ -58,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-KU-B8E">
-                                <rect key="frame" x="26.5" y="104" width="267" height="68"/>
+                                <rect key="frame" x="26.5" y="100" width="267" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="dWT-e0-Dsi"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="267" id="pOw-Jb-SdB"/>
@@ -179,10 +179,10 @@ layer.masksToBounds</string>
                                 <rect key="frame" x="16" y="82" width="288" height="92"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uY-Vn-N34">
-                                        <rect key="frame" x="82" y="14.5" width="124" height="63"/>
+                                        <rect key="frame" x="24" y="15" width="231" height="63"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="63" id="aWo-Qg-XCJ"/>
-                                            <constraint firstAttribute="width" constant="124" id="vso-sz-9Bu"/>
+                                            <constraint firstAttribute="width" constant="231" id="vso-sz-9Bu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="40"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,7 +190,7 @@ layer.masksToBounds</string>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="6uY-Vn-N34" firstAttribute="centerX" secondItem="GSY-F3-Vy6" secondAttribute="centerX" id="Ziu-XX-bik"/>
+                                    <constraint firstItem="6uY-Vn-N34" firstAttribute="centerX" secondItem="GSY-F3-Vy6" secondAttribute="centerX" constant="-4.5" id="Ziu-XX-bik"/>
                                     <constraint firstItem="6uY-Vn-N34" firstAttribute="centerY" secondItem="GSY-F3-Vy6" secondAttribute="centerY" id="gis-h2-wgB"/>
                                 </constraints>
                             </view>
