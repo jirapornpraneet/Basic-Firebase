@@ -34,13 +34,42 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         self.loginWithFacebookButton.delegate = self
     }
 
+    func alertControllerSuccess() {
+        let alertController = UIAlertController(title: R.string.localizable.logIn(),
+                                                message: R.string.localizable.success(),
+                                                preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
+                                                style: UIAlertActionStyle.default,
+                                                handler: { (_) in
+                                                    let vc = R.storyboard.main.tabBar()
+                                                    self.show(vc!, sender: send)
+        }))
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    func alertControllerError(error: Error) {
+        let alertController = UIAlertController(title: R.string.localizable.somethingWrong(),
+                                                message: error.localizedDescription,
+                                                preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
+                                                style: .cancel,
+                                                handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+
     func loginButton(_ loginButton: FBSDKLoginButton!,
                      didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        print("Success!!!!!")
+        let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        Auth.auth().signIn(with: credential) { (_, error) in
+            if  error != nil {
+                self.alertControllerSuccess()
+            }
+            self.alertControllerError(error: error!)
+        }
     }
 
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        print("Success!!!")
+        print("LogOut Success !!")
     }
 
     func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
@@ -96,28 +125,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     }
 
     @IBAction func loginClicked(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailTextField.text!,
-                           password: passwordTextField.text!) { (_, error) in
-            if error == nil {
-                let alertController = UIAlertController(title: R.string.localizable.logIn(),
-                                                        message: R.string.localizable.success(),
-                                                        preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
-                                                        style: UIAlertActionStyle.default,
-                                                        handler: { (_) in
-                                                            let vc = R.storyboard.main.tabBar()
-                                                             self.show(vc!, sender: sender)
-                }))
-                self.present(alertController, animated: true, completion: nil)
-            } else {
-                let alertController = UIAlertController(title: R.string.localizable.somethingWrong(),
-                                                        message: error?.localizedDescription,
-                                                        preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: R.string.localizable.oK(),
-                                                        style: .cancel,
-                                                        handler: nil))
-                self.present(alertController, animated: true, completion: nil)
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (_, error) in
+            if  error != nil {
+                self.alertControllerSuccess()
             }
+            self.alertControllerError(error: error!)
         }
     }
 }
