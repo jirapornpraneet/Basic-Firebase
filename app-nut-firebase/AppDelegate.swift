@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,12 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+
         if Auth.auth().currentUser == nil {
             self.window?.rootViewController = R.storyboard.main.mainLoginNavigation()
+            SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         } else {
             self.window?.rootViewController = R.storyboard.main.mainTabBarNavigation()
+            SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         }
         return true
+    }
+
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

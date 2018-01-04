@@ -9,13 +9,18 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FacebookLogin
+import FBSDKLoginKit
+import FBSDKCoreKit
+import FBSDKShareKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var showPasswordButton: UIButton!
+    @IBOutlet var loginWithFacebookButton: FBSDKLoginButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let tapGestureRecognizerKeyboard: UITapGestureRecognizer =
             UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGestureRecognizerKeyboard)
+
+        self.loginWithFacebookButton.delegate = self
+    }
+
+    func loginButton(_ loginButton: FBSDKLoginButton!,
+                     didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        print("Success!!!!!")
+    }
+
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Success!!!")
+    }
+
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        return true
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
