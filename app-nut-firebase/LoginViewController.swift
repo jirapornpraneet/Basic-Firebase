@@ -62,9 +62,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         Auth.auth().signIn(with: credential) { (_, error) in
             if  error != nil {
-                self.alertControllerSuccess()
+                self.alertControllerError(error: error!)
             }
-            self.alertControllerError(error: error!)
+            self.alertControllerSuccess()
         }
     }
 
@@ -126,10 +126,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
 
     @IBAction func loginClicked(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (_, error) in
-            if  error != nil {
-                self.alertControllerSuccess()
+            if error != nil {
+                self.alertControllerError(error: error!)
             }
-            self.alertControllerError(error: error!)
+            self.alertControllerSuccess()
         }
     }
 }
