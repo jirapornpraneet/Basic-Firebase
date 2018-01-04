@@ -52,17 +52,6 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         tabController.setViewController(myCameraViewController!, atIndex: 2)
         tabController.setViewController(myFeedViewController!, atIndex: 3)
         tabController.setViewController(myAccountViewController!, atIndex: 4)
-
-        tabController?.setAction(atIndex: 4) {
-        }
-        tabController?.setAction(atIndex: 3) {
-        }
-        tabController?.setAction(atIndex: 2) {
-        }
-        tabController?.setAction(atIndex: 1) {
-        }
-        tabController?.setAction(atIndex: 0) {
-        }
     }
 
     func customizationsTabBar() {
