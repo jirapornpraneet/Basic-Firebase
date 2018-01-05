@@ -31,6 +31,8 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
+        profileImageView.clipsToBounds = true
         firstnameTextField.delegate = self
         lastnameTextField.delegate = self
         emailTextField.delegate = self
@@ -133,29 +135,6 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
             .child("users")
             .child((Auth.auth().currentUser?.uid)!)
             .updateChildValues(["confirmpassword": confirmPasswordTextField.text!])
-    }
-
-    func setProfileImageView() {
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
-        profileImageView.clipsToBounds = true
-        if let uid = Auth.auth().currentUser?.uid {
-            databaseReference.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-                if let dict = snapshot.value as? [String: AnyObject] {
-                    if let profileImageURL = dict["pic"] as? String {
-                        let url = URL(string: profileImageURL)
-                        URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
-                            if error != nil {
-                                print(error!)
-                                return
-                            }
-                        DispatchQueue.main.async {
-                            self.profileImageView.image = UIImage(data: data!)
-                            }
-                        }).resume()
-                    }
-                }
-            })
-        }
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
