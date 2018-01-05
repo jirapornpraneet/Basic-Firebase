@@ -22,6 +22,14 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         setProfileImageView()
         setShowData()
+        let user = Auth.auth().currentUser
+        if let user = user {
+            self.firstnameLabel.text = user.displayName
+            self.lastnameLabel.text = user.displayName
+            self.genderLabel.text = ""
+            self.emailLabel.text = user.email
+            self.profileImageView.image = nil
+        }
     }
 
     func setProfileImageView() {
