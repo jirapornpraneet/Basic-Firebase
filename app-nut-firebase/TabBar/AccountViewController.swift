@@ -23,8 +23,11 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
         profileImageView.clipsToBounds = true
-        setProfileImageView()
         setShowData()
+    }
+
+    func setShowData() {
+        //show date login with facebook
         let user = Auth.auth().currentUser
         if let user = user {
             firstnameLabel.text = user.displayName
@@ -33,44 +36,18 @@ class AccountViewController: UIViewController {
             emailLabel.text = user.email
             profileImageView.sd_setImage(with: user.photoURL, completed: nil)
         }
-    }
-
-    func setProfileImageView() {
+        //show data login with email & password
         let databaseReference = Database.database().reference()
-        if  let uid = Auth.auth().currentUser?.uid {
+        if  let uid = user?.uid {
             databaseReference.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 if let dict = snapshot.value as? [String: AnyObject] {
-                    if let profileImageURL = dict["pic"] as? String {
-                        let url = URL(string: profileImageURL)
-                        URLSession.shared.dataTask(with: url!,
-                                                   completionHandler: { (data, _, error) in
-                                                    if error != nil {
-                                                        print(error!)
-                                                        return
-                                                    }
-                                                    DispatchQueue.main.async {
-                                                        self.profileImageView.image = UIImage(data: data!)
-                                                    }
-                        }).resume()
-                    }
-                }
-            })
-        }
-    }
-
-    func setShowData() {
-        let databaseReference = Database.database().reference()
-        if  let uid = Auth.auth().currentUser?.uid {
-            databaseReference.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-                if let dict = snapshot.value as? [String: AnyObject] {
-                    let firstnameString = dict["firstname"] as? String
-                    let lastnameString = dict["lastname"] as? String
-                    let genderString = dict["gender"] as? String
-                    let emailString = dict["email"] as? String
-                    self.firstnameLabel.text = firstnameString
-                    self.lastnameLabel.text = lastnameString
-                    self.genderLabel.text = genderString
-                    self.emailLabel.text = emailString
+                    let profileImageURL = dict["pic"] as? String
+                    let urlString = URL(string: profileImageURL!)
+                    self.profileImageView.sd_setImage(with: urlString, completed: nil)
+                    self.firstnameLabel.text = dict["firstname"] as? String
+                    self.lastnameLabel.text = dict["lastname"] as? String
+                    self.genderLabel.text = dict["gender"] as? String
+                    self.emailLabel.text = dict["email"] as? String
                 }
             }, withCancel: { (error) in
                 print("Error", error)
