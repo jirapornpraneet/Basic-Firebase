@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import SDWebImage
 
 class AccountViewController: UIViewController {
 
@@ -28,7 +29,7 @@ class AccountViewController: UIViewController {
             self.lastnameLabel.text = user.displayName
             self.genderLabel.text = ""
             self.emailLabel.text = user.email
-            self.profileImageView.image = nil
+            self.profileImageView.sd_setImage(with: user.photoURL, completed: nil)
         }
     }
 
