@@ -21,21 +21,21 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
+        profileImageView.clipsToBounds = true
         setProfileImageView()
         setShowData()
         let user = Auth.auth().currentUser
         if let user = user {
-            self.firstnameLabel.text = user.displayName
-            self.lastnameLabel.text = user.displayName
-            self.genderLabel.text = ""
-            self.emailLabel.text = user.email
-            self.profileImageView.sd_setImage(with: user.photoURL, completed: nil)
+            firstnameLabel.text = user.displayName
+            lastnameLabel.text = user.displayName
+            genderLabel.text = ""
+            emailLabel.text = user.email
+            profileImageView.sd_setImage(with: user.photoURL, completed: nil)
         }
     }
 
     func setProfileImageView() {
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
-        profileImageView.clipsToBounds = true
         let databaseReference = Database.database().reference()
         if  let uid = Auth.auth().currentUser?.uid {
             databaseReference.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
