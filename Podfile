@@ -15,6 +15,9 @@ target 'app-nut-firebase' do
     pod 'FBSDKCoreKit', '~> 4.25.0'
     pod 'FBSDKLoginKit', '~> 4.25.0'
     pod 'FBSDKShareKit', '~> 4.25.0'
+    #Twitter
+    pod 'TwitterKit', '~> 3.3.0'
+    pod 'TwitterCore', '~> 3.1.0'
     #Utilities
     pod 'SwiftLint', '~> 0.23.1'
     pod 'AZTabBar','~> 1.3.1'

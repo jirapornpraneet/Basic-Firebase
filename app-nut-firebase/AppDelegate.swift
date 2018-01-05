@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FacebookCore
+import TwitterKit
+import TwitterCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,13 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-
+        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        TWTRTwitter.sharedInstance().start(withConsumerKey: "9pa8cilfXFUuCzX7lzh3bXWSM",
+                                           consumerSecret: "DmU8hMrTnikqS5c6InFdROQSO2lTIdovv8URzfVkk5Imb6kHkj")
         if Auth.auth().currentUser == nil {
             self.window?.rootViewController = R.storyboard.main.mainLoginNavigation()
-            SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         } else {
             self.window?.rootViewController = R.storyboard.main.mainTabBarNavigation()
-            SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         }
         return true
     }
