@@ -20,8 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //firebase
         FirebaseApp.configure()
+        
+        //facebook
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //twitter
         TWTRTwitter.sharedInstance().start(withConsumerKey: "9pa8cilfXFUuCzX7lzh3bXWSM",
                                            consumerSecret: "DmU8hMrTnikqS5c6InFdROQSO2lTIdovv8URzfVkk5Imb6kHkj")
         if Auth.auth().currentUser == nil {
@@ -34,7 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ app: UIApplication, open url: URL,
                      options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
-        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+        let facebookLogin = SDKApplicationDelegate.shared.application(app, open: url, options: options)
+        let twitterLogin = TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+        return facebookLogin || twitterLogin
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

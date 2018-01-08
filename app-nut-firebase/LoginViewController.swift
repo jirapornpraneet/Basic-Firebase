@@ -13,6 +13,7 @@ import FacebookLogin
 import FBSDKLoginKit
 import FBSDKCoreKit
 import FBSDKShareKit
+import TwitterKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
 
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var showPasswordButton: UIButton!
     @IBOutlet var loginWithFacebookButton: FBSDKLoginButton!
+    @IBOutlet var loginWithTwitterButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         view.addGestureRecognizer(tapGestureRecognizerKeyboard)
 
         self.loginWithFacebookButton.delegate = self
+
+        //twitter
+        let logInButton = TWTRLogInButton(logInCompletion: { session, error in
+            if session != nil {
+                let authToken = session?.authToken
+                let authTokenSecret = session?.authTokenSecret
+                let credential = TwitterAuthProvider.credential(withToken: authToken!, secret: authTokenSecret!)
+                Auth.auth().signIn(with: credential, completion: { (_, error) in
+                    if error != nil {
+                        print("Error na ja", error ?? "")
+                        return
+                    }
+                    self.alertControllerSuccess()
+                    print("Logged in with twiitter na ja")
+                })
+            } else {
+                if error != nil {
+                    print("Error na ja", error ?? "")
+                }
+            }
+        })
+        logInButton.center = self.view.center
+        self.view.addSubview(logInButton)
     }
 
     func alertControllerSuccess() {
