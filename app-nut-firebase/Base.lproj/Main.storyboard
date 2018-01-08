@@ -396,7 +396,7 @@ layer.masksToBounds</string>
                                     <constraint firstAttribute="width" constant="145" id="wbd-VU-xJ8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Login with twitter">
+                                <state key="normal">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
