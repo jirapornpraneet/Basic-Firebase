@@ -377,11 +377,11 @@ layer.masksToBounds</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-Eb-Kso" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="88" y="405" width="145" height="30"/>
+                                <rect key="frame" x="70.5" y="405" width="180" height="30"/>
                                 <color key="backgroundColor" red="0.20417037099999999" green="0.33194745209999998" blue="0.63897921950000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CKg-Jy-h2g"/>
-                                    <constraint firstAttribute="width" constant="145" id="QnO-zm-mF2"/>
+                                    <constraint firstAttribute="width" constant="180" id="QnO-zm-mF2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Login with facebook">
@@ -389,11 +389,11 @@ layer.masksToBounds</string>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNk-AS-h7c">
-                                <rect key="frame" x="88" y="440" width="145" height="30"/>
+                                <rect key="frame" x="70.5" y="440" width="180" height="30"/>
                                 <color key="backgroundColor" red="0.051728665828704834" green="0.78189247846603394" blue="0.98921555280685425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="p1o-kM-k5U"/>
-                                    <constraint firstAttribute="width" constant="145" id="wbd-VU-xJ8"/>
+                                    <constraint firstAttribute="width" constant="180" id="wbd-VU-xJ8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal">

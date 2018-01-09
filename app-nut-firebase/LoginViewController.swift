@@ -37,9 +37,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
 
         logInWithTwitter()
     }
-    
+
     func logInWithTwitter() {
-        let logInButton = TWTRLogInButton(logInCompletion: { session, error in
+        let logInWithTwitter = TWTRLogInButton(logInCompletion: { session, error in
             if session != nil {
                 let authToken = session?.authToken
                 let authTokenSecret = session?.authTokenSecret
@@ -59,8 +59,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             }
         })
 
-        logInButton.frame = CGRect(x: 0, y: 0, width: 145, height: 30)
-        loginWithTwitterButton.addSubview(logInButton)
+        logInWithTwitter.frame = CGRect(x: 0, y: 0, width: 180, height: 30)
+        loginWithTwitterButton.addSubview(logInWithTwitter)
     }
 
     func alertControllerSuccess() {
