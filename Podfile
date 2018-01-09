@@ -18,6 +18,8 @@ target 'app-nut-firebase' do
     #Twitter
     pod 'TwitterKit', '~> 3.3.0'
     pod 'TwitterCore', '~> 3.1.0'
+    #Google
+    pod 'GoogleSignIn'
     #Utilities
     pod 'SwiftLint', '~> 0.23.1'
     pod 'AZTabBar','~> 1.3.1'
