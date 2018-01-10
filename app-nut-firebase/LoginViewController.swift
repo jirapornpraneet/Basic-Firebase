@@ -14,8 +14,10 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import FBSDKShareKit
 import TwitterKit
+import GoogleSignIn
 
-class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate,
+FBSDKLoginButtonDelegate, GIDSignInUIDelegate {
 
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -23,6 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     @IBOutlet var showPasswordButton: UIButton!
     @IBOutlet var loginWithFacebookButton: FBSDKLoginButton!
     @IBOutlet var loginWithTwitterButton: UIButton!
+    @IBOutlet var loginWithGoogleButton: GIDSignInButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +38,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
 
         self.loginWithFacebookButton.delegate = self
 
-        logInWithTwitter()
+        setUpLogInWithTwitterButton()
+        setUpLogInWithGoogleButton()
     }
 
-    func logInWithTwitter() {
+    func setUpLogInWithGoogleButton() {
+        loginWithGoogleButton.addTarget(self, action: #selector(handleCustomGoogleSign), for: .touchUpInside)
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+
+    @objc func handleCustomGoogleSign() {
+        GIDSignIn.sharedInstance().signIn()
+    }
+
+    func setUpLogInWithTwitterButton() {
         let logInWithTwitter = TWTRLogInButton(logInCompletion: { session, error in
             if session != nil {
                 let authToken = session?.authToken

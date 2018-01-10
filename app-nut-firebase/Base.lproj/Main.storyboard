@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pGv-mM-KXr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pGv-mM-KXr">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -400,12 +400,27 @@ layer.masksToBounds</string>
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-2w-Qkg">
+                                <rect key="frame" x="70" y="475" width="180" height="30"/>
+                                <color key="backgroundColor" red="0.85832407990000004" green="0.35403056399999999" blue="0.31692788249999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="KL6-Xx-isb"/>
+                                    <constraint firstAttribute="height" constant="30" id="d6t-up-boX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="hsI-W0-Jhc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="wNE-nH-vsR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Login with google">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97400460030000002" green="0.92568824110000003" blue="0.93255254949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="11h-tq-2FI" firstAttribute="trailing" secondItem="S4B-1u-No2" secondAttribute="trailing" constant="16" id="AfY-e2-3D5"/>
                             <constraint firstItem="11h-tq-2FI" firstAttribute="bottom" secondItem="Wee-uk-yoU" secondAttribute="bottom" constant="20" id="CLV-KZ-J4f"/>
                             <constraint firstItem="S4B-1u-No2" firstAttribute="leading" secondItem="11h-tq-2FI" secondAttribute="leading" constant="16" id="Ege-OJ-BRI"/>
+                            <constraint firstItem="aEj-2w-Qkg" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="Hbu-mx-G8X"/>
                             <constraint firstItem="GSY-F3-Vy6" firstAttribute="top" secondItem="11h-tq-2FI" secondAttribute="top" constant="18" id="Hxz-GJ-76q"/>
                             <constraint firstItem="qUz-d6-ndi" firstAttribute="bottom" secondItem="11h-tq-2FI" secondAttribute="bottom" id="ISI-4R-AoE"/>
                             <constraint firstItem="qUz-d6-ndi" firstAttribute="trailing" secondItem="11h-tq-2FI" secondAttribute="trailing" id="PmR-63-Mt4"/>
@@ -420,6 +435,7 @@ layer.masksToBounds</string>
                             <constraint firstItem="vLg-Re-Hyo" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="qVu-QS-Wzr"/>
                             <constraint firstItem="S4B-1u-No2" firstAttribute="centerY" secondItem="JEa-Su-Gsg" secondAttribute="centerY" constant="-31" id="qcb-iH-pLv"/>
                             <constraint firstItem="qUz-d6-ndi" firstAttribute="leading" secondItem="11h-tq-2FI" secondAttribute="leading" id="qiN-oc-uRu"/>
+                            <constraint firstItem="aEj-2w-Qkg" firstAttribute="top" secondItem="QNk-AS-h7c" secondAttribute="bottom" constant="5" id="uJF-MW-eWU"/>
                             <constraint firstItem="7AA-A4-utZ" firstAttribute="centerX" secondItem="JEa-Su-Gsg" secondAttribute="centerX" id="wFt-K1-fiv"/>
                             <constraint firstItem="GSY-F3-Vy6" firstAttribute="leading" secondItem="11h-tq-2FI" secondAttribute="leading" constant="16" id="xGn-Uf-yT0"/>
                             <constraint firstItem="vLg-Re-Hyo" firstAttribute="top" secondItem="S4B-1u-No2" secondAttribute="bottom" id="xrM-G4-5wh"/>
@@ -432,6 +448,7 @@ layer.masksToBounds</string>
                         <outlet property="emailTextField" destination="4Pc-2g-Bgm" id="gkm-pa-CND"/>
                         <outlet property="loginButton" destination="vLg-Re-Hyo" id="EAo-v4-quA"/>
                         <outlet property="loginWithFacebookButton" destination="dlN-Eb-Kso" id="euD-nw-ads"/>
+                        <outlet property="loginWithGoogleButton" destination="aEj-2w-Qkg" id="H7v-iZ-2zK"/>
                         <outlet property="loginWithTwitterButton" destination="QNk-AS-h7c" id="ds0-8f-u0r"/>
                         <outlet property="passwordTextField" destination="pQp-bB-mRb" id="FlO-BH-5CB"/>
                         <outlet property="showPasswordButton" destination="Hpu-B9-EAr" id="hTC-xa-aHX"/>
