@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.6.0)
   - AZTabBar (1.3.1):
     - EasyNotificationBadge
   - Bolts (1.8.4):
@@ -7,7 +8,12 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - CocoaSecurity (1.2.4)
   - EasyNotificationBadge (1.1.2)
+  - EVReflection/Alamofire (5.4.0):
+    - Alamofire
+    - EVReflection/Core
+  - EVReflection/Core (5.4.0)
   - FacebookCore (0.2.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.15)
@@ -83,6 +89,8 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - OCThumbor (0.3.1):
+    - CocoaSecurity (~> 1.2)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
@@ -96,6 +104,7 @@ PODS:
 
 DEPENDENCIES:
   - AZTabBar (~> 1.3.1)
+  - EVReflection/Alamofire
   - FacebookCore
   - FacebookLogin
   - FBSDKCoreKit (~> 4.25.0)
@@ -106,6 +115,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - GoogleSignIn
+  - OCThumbor (~> 0.3.1)
   - R.swift (~> 4.0.0)
   - SDWebImage (~> 4.0)
   - SwiftLint (~> 0.23.1)
@@ -113,9 +123,12 @@ DEPENDENCIES:
   - TwitterKit (~> 3.3.0)
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AZTabBar: bbb19d62a02c7303e7331c855d1e84d1ddf9ba26
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
   EasyNotificationBadge: b303fbdb042ff221715ac4ea802c8c7f284081dc
+  EVReflection: 58296497e901ba9803228055689e835864b3f43f
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
   FBSDKCoreKit: 53e3f4bfb64e80c5f229dd30ae33ff57fbbbd2d1
@@ -134,6 +147,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  OCThumbor: 60b83bb204b7f860aecf515ed183a198f30c6f43
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
@@ -141,6 +155,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 9d70eeb11ad02985d3fe0562bc9ebbebcdac4761
+PODFILE CHECKSUM: e51f192180c3cd5e03b30918c31d9e67b3659ac6
 
 COCOAPODS: 1.3.1

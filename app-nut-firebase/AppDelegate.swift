@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     annotation: options[UIApplicationOpenURLOptionsKey.annotation])
         return facebookLogin || twitterLogin || googleLogin
     }
-    
+
     func applicationWillResignActive(_ application: UIApplication) {
     }
 

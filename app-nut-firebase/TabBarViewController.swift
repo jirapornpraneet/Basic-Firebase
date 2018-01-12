@@ -44,13 +44,13 @@ class TabBarViewController: UIViewController, AZTabBarDelegate {
         let myHomeViewController = R.storyboard.main.homeViewController()
         let mySearchViewController = R.storyboard.main.searchViewController()
         let myCameraViewController = R.storyboard.main.cameraViewController()
-        let myFeedViewController = R.storyboard.main.feedViewController()
+        let myFeedTableViewController = R.storyboard.main.feedTableViewController()
         let myAccountViewController = R.storyboard.main.accountViewController()
 
         tabController.setViewController(myHomeViewController!, atIndex: 0)
         tabController.setViewController(mySearchViewController!, atIndex: 1)
         tabController.setViewController(myCameraViewController!, atIndex: 2)
-        tabController.setViewController(myFeedViewController!, atIndex: 3)
+        tabController.setViewController(myFeedTableViewController!, atIndex: 3)
         tabController.setViewController(myAccountViewController!, atIndex: 4)
     }
 

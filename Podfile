@@ -25,4 +25,6 @@ target 'app-nut-firebase' do
     pod 'AZTabBar','~> 1.3.1'
     pod 'R.swift', '~> 4.0.0'
     pod 'SDWebImage', '~> 4.0'
+    pod 'EVReflection/Alamofire'
+    pod 'OCThumbor', '~> 0.3.1'
 end

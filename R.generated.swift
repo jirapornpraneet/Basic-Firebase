@@ -260,7 +260,7 @@ struct R: Rswift.Validatable {
       /// Segue identifier `Camera`.
       static let camera: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, TabBarViewController, CameraViewController> = Rswift.StoryboardSegueIdentifier(identifier: "Camera")
       /// Segue identifier `Heart`.
-      static let heart: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, TabBarViewController, FeedViewController> = Rswift.StoryboardSegueIdentifier(identifier: "Heart")
+      static let heart: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, TabBarViewController, FeedTableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "Heart")
       /// Segue identifier `HomeViewController`.
       static let homeViewController: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, TabBarViewController, HomeViewController> = Rswift.StoryboardSegueIdentifier(identifier: "HomeViewController")
       /// Segue identifier `Search`.
@@ -283,7 +283,7 @@ struct R: Rswift.Validatable {
       /// Optionally returns a typed version of segue `Heart`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func heart(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, TabBarViewController, FeedViewController>? {
+      static func heart(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, TabBarViewController, FeedTableViewController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.tabBarViewController.heart, segue: segue)
       }
       
@@ -1073,7 +1073,7 @@ struct _R: Rswift.Validatable {
       let accountViewController = StoryboardViewControllerResource<AccountViewController>(identifier: "AccountViewController")
       let bundle = R.hostingBundle
       let cameraViewController = StoryboardViewControllerResource<CameraViewController>(identifier: "CameraViewController")
-      let feedViewController = StoryboardViewControllerResource<FeedViewController>(identifier: "FeedViewController")
+      let feedTableViewController = StoryboardViewControllerResource<FeedTableViewController>(identifier: "FeedTableViewController")
       let homeViewController = StoryboardViewControllerResource<HomeViewController>(identifier: "HomeViewController")
       let login = StoryboardViewControllerResource<LoginViewController>(identifier: "Login")
       let mainLoginNavigation = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "MainLoginNavigation")
@@ -1091,8 +1091,8 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: cameraViewController)
       }
       
-      func feedViewController(_: Void = ()) -> FeedViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: feedViewController)
+      func feedTableViewController(_: Void = ()) -> FeedTableViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: feedTableViewController)
       }
       
       func homeViewController(_: Void = ()) -> HomeViewController? {
@@ -1133,7 +1133,7 @@ struct _R: Rswift.Validatable {
         if _R.storyboard.main().login() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'login' could not be loaded from storyboard 'Main' as 'LoginViewController'.") }
         if _R.storyboard.main().cameraViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'cameraViewController' could not be loaded from storyboard 'Main' as 'CameraViewController'.") }
         if _R.storyboard.main().homeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'homeViewController' could not be loaded from storyboard 'Main' as 'HomeViewController'.") }
-        if _R.storyboard.main().feedViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'feedViewController' could not be loaded from storyboard 'Main' as 'FeedViewController'.") }
+        if _R.storyboard.main().feedTableViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'feedTableViewController' could not be loaded from storyboard 'Main' as 'FeedTableViewController'.") }
         if _R.storyboard.main().accountViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'accountViewController' could not be loaded from storyboard 'Main' as 'AccountViewController'.") }
         if _R.storyboard.main().tabBar() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tabBar' could not be loaded from storyboard 'Main' as 'TabBarViewController'.") }
         if _R.storyboard.main().mainTabBarNavigation() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarNavigation' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }

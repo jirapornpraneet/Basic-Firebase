@@ -18,6 +18,8 @@
 		AB062D7E1FB195DA00C103E6 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062D7D1FB195DA00C103E6 /* SingUpViewController.swift */; };
 		AB15A3EB1FF0E70E009E599C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB15A3ED1FF0E70E009E599C /* Localizable.strings */; };
 		AB15A3F21FF0FA0D009E599C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15A3F11FF0FA0D009E599C /* R.generated.swift */; };
+		AB41948020086051006DFC99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41947E20086051006DFC99 /* Constants.swift */; };
+		AB41948120086051006DFC99 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41947F20086051006DFC99 /* FunctionHelper.swift */; };
 		AB554C081FBBE70200776985 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB554C071FBBE70200776985 /* CardView.swift */; };
 		AB66CD3C1FFF78A500124B07 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AB66CD381FFF78A300124B07 /* TwitterKitResources.bundle */; };
 		AB66CD3D1FFF78A500124B07 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB66CD391FFF78A400124B07 /* TwitterCore.framework */; };
@@ -27,8 +29,9 @@
 		ABAE073C1FBAA1F40039C31B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE07371FBAA1F40039C31B /* SearchViewController.swift */; };
 		ABAE073D1FBAA1F40039C31B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE07381FBAA1F40039C31B /* HomeViewController.swift */; };
 		ABAE073E1FBAA1F40039C31B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE07391FBAA1F40039C31B /* CameraViewController.swift */; };
-		ABAE073F1FBAA1F40039C31B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE073A1FBAA1F40039C31B /* FeedViewController.swift */; };
 		ABAE07401FBAA1F40039C31B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE073B1FBAA1F40039C31B /* AccountViewController.swift */; };
+		ABD4FDE92007631400289C02 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD4FDE82007631400289C02 /* FeedTableViewController.swift */; };
+		ABD4FDEC2007648A00289C02 /* UserResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD4FDEB2007648A00289C02 /* UserResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,8 @@
 		AB15A3EE1FF0E71A009E599C /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB15A3EF1FF0E81D009E599C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB15A3F11FF0FA0D009E599C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		AB41947E20086051006DFC99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AB41947F20086051006DFC99 /* FunctionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionHelper.swift; sourceTree = "<group>"; };
 		AB554C071FBBE70200776985 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AB66CD381FFF78A300124B07 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
 		AB66CD391FFF78A400124B07 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
@@ -59,8 +64,9 @@
 		ABAE07371FBAA1F40039C31B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		ABAE07381FBAA1F40039C31B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ABAE07391FBAA1F40039C31B /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		ABAE073A1FBAA1F40039C31B /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		ABAE073B1FBAA1F40039C31B /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		ABD4FDE82007631400289C02 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		ABD4FDEB2007648A00289C02 /* UserResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,8 @@
 				AB062D781FB183AA00C103E6 /* LoginViewController.swift */,
 				AB9ABE141FB1BB5600DB3204 /* ResetPasswordViewController.swift */,
 				AB062D671FB172D200C103E6 /* TabBarViewController.swift */,
+				AB41947D20086051006DFC99 /* Function Helper */,
+				ABD4FDEA2007648A00289C02 /* Resource */,
 				ABAE07361FBAA1F40039C31B /* TabBar */,
 				AB062D691FB172D200C103E6 /* Main.storyboard */,
 				AB062D6C1FB172D200C103E6 /* Assets.xcassets */,
@@ -137,16 +145,34 @@
 			path = "app-nut-firebase";
 			sourceTree = "<group>";
 		};
+		AB41947D20086051006DFC99 /* Function Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AB41947E20086051006DFC99 /* Constants.swift */,
+				AB41947F20086051006DFC99 /* FunctionHelper.swift */,
+			);
+			path = "Function Helper";
+			sourceTree = "<group>";
+		};
 		ABAE07361FBAA1F40039C31B /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				ABAE07371FBAA1F40039C31B /* SearchViewController.swift */,
 				ABAE07381FBAA1F40039C31B /* HomeViewController.swift */,
 				ABAE07391FBAA1F40039C31B /* CameraViewController.swift */,
-				ABAE073A1FBAA1F40039C31B /* FeedViewController.swift */,
 				ABAE073B1FBAA1F40039C31B /* AccountViewController.swift */,
+				ABD4FDE82007631400289C02 /* FeedTableViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		ABD4FDEA2007648A00289C02 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				ABD4FDEB2007648A00289C02 /* UserResource.swift */,
+			);
+			name = Resource;
+			path = ../../LoginFacebook/Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +326,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-app-nut-firebase/Pods-app-nut-firebase-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AZTabBar/AZTabBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaSecurity/CocoaSecurity.framework",
+				"${BUILT_PRODUCTS_DIR}/EVReflection/EVReflection.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyNotificationBadge/EasyNotificationBadge.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -310,6 +339,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/OCThumbor/OCThumbor.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
@@ -320,7 +350,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AZTabBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaSecurity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVReflection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyNotificationBadge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -330,6 +363,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCThumbor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
@@ -351,15 +385,18 @@
 			files = (
 				AB062D791FB183AA00C103E6 /* LoginViewController.swift in Sources */,
 				ABAE073C1FBAA1F40039C31B /* SearchViewController.swift in Sources */,
+				ABD4FDE92007631400289C02 /* FeedTableViewController.swift in Sources */,
 				ABAE073E1FBAA1F40039C31B /* CameraViewController.swift in Sources */,
 				AB062D681FB172D200C103E6 /* TabBarViewController.swift in Sources */,
-				ABAE073F1FBAA1F40039C31B /* FeedViewController.swift in Sources */,
 				AB9ABE151FB1BB5600DB3204 /* ResetPasswordViewController.swift in Sources */,
 				AB062D7E1FB195DA00C103E6 /* SingUpViewController.swift in Sources */,
 				ABAE07401FBAA1F40039C31B /* AccountViewController.swift in Sources */,
 				AB062D661FB172D200C103E6 /* AppDelegate.swift in Sources */,
 				AB554C081FBBE70200776985 /* CardView.swift in Sources */,
 				ABAE073D1FBAA1F40039C31B /* HomeViewController.swift in Sources */,
+				AB41948020086051006DFC99 /* Constants.swift in Sources */,
+				AB41948120086051006DFC99 /* FunctionHelper.swift in Sources */,
+				ABD4FDEC2007648A00289C02 /* UserResource.swift in Sources */,
 				AB15A3F21FF0FA0D009E599C /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
