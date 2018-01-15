@@ -334,8 +334,12 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 19 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 21 localization keys.
     struct localizable {
+      /// Base translation: %@ at %@
+      /// 
+      /// Locales: Base
+      static let ที่ = Rswift.StringResource(key: "%@ ที่ %@", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base"], comment: nil)
       /// Base translation: Account
       /// 
       /// Locales: th, Base
@@ -412,6 +416,17 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: th, Base
       static let yourImageHasBeenSaved = Rswift.StringResource(key: "Your image has been saved", tableName: "Localizable", bundle: R.hostingBundle, locales: ["th", "Base"], comment: nil)
+      /// Base translation: เคยศึกษา %@ ที่ %@
+      /// 
+      /// Locales: Base
+      static let เคยศึกษาที่ = Rswift.StringResource(key: "เคยศึกษา %@ ที่ %@", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base"], comment: nil)
+      
+      /// Base translation: %@ at %@
+      /// 
+      /// Locales: Base
+      static func ที่(_ value1: String, _ value2: String) -> String {
+        return String(format: NSLocalizedString("%@ ที่ %@", bundle: R.hostingBundle, value: "%@ at %@", comment: ""), locale: R.applicationLocale, value1, value2)
+      }
       
       /// Base translation: Account
       /// 
@@ -544,6 +559,13 @@ struct R: Rswift.Validatable {
       /// Locales: th, Base
       static func yourImageHasBeenSaved(_: Void = ()) -> String {
         return NSLocalizedString("Your image has been saved", bundle: R.hostingBundle, value: "Your image has been saved", comment: "")
+      }
+      
+      /// Base translation: เคยศึกษา %@ ที่ %@
+      /// 
+      /// Locales: Base
+      static func เคยศึกษาที่(_ value1: String, _ value2: String) -> String {
+        return String(format: NSLocalizedString("เคยศึกษา %@ ที่ %@", bundle: R.hostingBundle, value: "เคยศึกษา %@ ที่ %@", comment: ""), locale: R.applicationLocale, value1, value2)
       }
       
       fileprivate init() {}
